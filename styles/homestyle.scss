@@ -1,0 +1,417 @@
+@import './style.scss';
+
+@media only screen and (min-width: 850px) {
+    body {
+        .myhome {
+            .carousel {
+                border-radius: 20px;
+                .carousel-inner{
+                    border-radius: 20px;
+                    height: fit-content;
+                    max-height: 80vh;
+                    @include myboxshadow(var(--shadow-color));
+                    .carousel-item {
+                        .carousel-caption {
+                            p {
+                                background-color: var(--shadow-color);
+                                color: var(--bg-color);
+                                border-radius: 2vw;
+                            }
+                            top: 35%;
+                            transform: translateY(-50%);
+                            font-weight: bold;
+                            color: #333;
+                            font-size: 2vw;
+                            @include myshadow(#333);
+                        }
+                    }
+                }
+                .carousel-control-next {
+                    transition: all ease-in-out 0.4s;
+                    .carousel-control-next-icon {
+                        transform: scale(2);
+                    }
+                    &:hover {
+                        border-top-right-radius: 20px;
+                        border-bottom-right-radius: 20px;
+                        background-color: var(--shadow-color);
+                    }
+                }
+                .carousel-control-prev{
+                        transition: all ease-in-out 0.4s;
+                        .carousel-control-prev-icon {
+                            transform: scale(2);
+                        }
+                    &:hover {
+                        border-top-left-radius: 20px;
+                        border-bottom-left-radius: 20px;
+                        background-color: var(--shadow-color);
+                    }
+                }
+                margin: 5vh 5vw;
+                width: 90vw;
+                height: fit-content;
+                max-height: 80vh;
+            }
+        }
+        .org_cont {
+            display: flex;
+            gap: 10vh;
+            padding-left: 5vh;
+            .orginfo {
+                border-radius: 20px;
+                width: 45vw;
+                background-color: var(--shadow-color);
+                @include myboxshadow(var(--color5));
+                color: var(--text-color);
+                margin-top: 5vh;
+                margin-bottom: 5vh;
+                padding: 10px;
+            }
+        }
+        .videos {
+            display: flex;
+            margin-top: 10vh;
+            .videocard {
+                border-radius: 10px;
+                width: 30vw;
+                margin-left: 5vh;
+                min-height: calc(20vw + 20px);
+                background-color: var(--shadow-color);
+                @include myboxshadow(var(--color1));
+                iframe {
+                    border-radius: 10px;
+                    width: 96%;
+                    height: 17vw;
+                    margin-left: 2%;
+                }
+                p {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: var(--text-color);
+                    margin-bottom: 0;
+                    font-size: 1.5vw;
+                    width: 100%;
+                    min-height: calc(3vw + 15px);
+                }
+            }
+        }
+        .cards {
+            display: grid;
+            width: 90vw;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: auto auto auto;
+            grid-gap: 4vw;
+            margin-left: 5vw;
+            margin-right: 5vw;
+            margin-bottom: 5vw;
+            margin-top: 10vh;
+            .card {
+                padding-top: 20px;
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+                border-radius: 20px;
+                background-color: var(--shadow-color);
+                color: var(--text-color);
+                img {
+                    width: 80%;
+                    max-width: 100px;
+                }
+            }
+            .main-card {
+                grid-row: 3/4;
+                align-self: center;
+            }
+            .prelast {
+                align-self: center;
+            }
+            .news {
+                grid-column: 2/4;
+                grid-row: 2/4;
+                color: var(--text2);
+                .title {
+                    width: 100%;
+                    border-bottom: 2px red solid;
+                    padding-bottom: 10px;
+                    margin-bottom: 20px;
+                    font-size: x-large;
+                }
+                .article {
+                    .article_desc {
+                        display: flex;
+                        width: 100%;
+                        .article_date {
+                            flex: 1;
+                            text-align: end;
+                        }
+                    }
+                    hr {
+                        background-color: var(--text2);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    body {
+        .myhome {
+            .carousel {
+                border-radius: 20px;
+                .carousel-inner{
+                    border-radius: 20px;
+                    height: fit-content;
+                    max-height: 80vh;
+                    @include myboxshadow(var(--shadow-color));
+                    .carousel-item {
+                        .carousel-caption {
+                            p {
+                                background-color: var(--shadow-color);
+                                color: var(--bg-color);
+                                border-radius: 2vw;
+                            }
+                            top: 35%;
+                            transform: translateY(-50%);
+                            font-weight: bold;
+                            color: #333;
+                            font-size: 2vw;
+                            @include myshadow(#333);
+                        }
+                    }
+                }
+                .carousel-control-next {
+                    transition: all ease-in-out 0.4s;
+                }
+                 .carousel-control-prev{
+                        transition: all ease-in-out 0.4s;
+                }
+                margin: 5vh 5vw;
+                width: 90vw;
+                height: fit-content;
+                max-height: 80vh;
+            }
+            .orginfo {
+                width: 90vw;
+                height: fit-content;
+                background-color: var(--shadow-color);
+                @include myboxshadow(var(--color5));
+                color: var(--text-color);
+                margin-top: 10vh;
+                margin-bottom: 5vh;
+                margin-left: 5vw;
+                padding: 10px;
+            }
+            .videos {
+                display: flex;
+                margin-top: 10vh;
+                flex-direction: column;
+                padding-left: 5vw;
+                .videocard {
+                    margin-top: 10vh;
+                    border-radius: 10px;
+                    width: 90vw;
+                    min-height: calc(60vw + 10px);
+                    background-color: var(--shadow-color);
+                    @include myboxshadow(var(--color1));
+                    iframe {
+                        border-radius: 10px;
+                        width: 96%;
+                        height: 50vw;
+                        margin-left: 2%;
+                    }
+                    p {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: var(--text-color);
+                        margin-bottom: 0;
+                        font-size: 2,5vw;
+                        width: 100%;
+                        min-height: calc(3vw + 15px);
+                    }
+                }
+            }
+            .cards {
+                display: flex;
+                flex-direction: column;
+                width: 90vw;
+                grid-gap: 4vw;
+                margin-left: 5vw;
+                margin-right: 5vw;
+                margin-bottom: 5vw;
+                margin-top: 10vh;
+                .card {
+                    padding-top: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+                    align-items: center;
+                    border-radius: 20px;
+                    background-color: var(--shadow-color);
+                    color: var(--text-color);
+                    img {
+                        width: 80%;
+                        max-width: 100px;
+                    }
+                }
+                .news {
+                    color: var(--text2);
+                    .title {
+                        width: 100%;
+                        border-bottom: 2px red solid;
+                        padding-bottom: 10px;
+                        margin-bottom: 20px;
+                        font-size: x-large;
+                    }
+                    .article {
+                        .article_desc {
+                            .article_date {
+                                flex: 1;
+                                text-align: right;
+                            }
+                        }
+                        hr {
+                            background-color: var(--text2);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width: 450px) and (max-width: 850px) {
+    body {
+        .myhome {
+            .carousel {
+                border-radius: 20px;
+                .carousel-inner{
+                    border-radius: 20px;
+                    height: fit-content;
+                    max-height: 80vh;
+                    @include myboxshadow(var(--shadow-color));
+                    .carousel-item {
+                        .carousel-caption {
+                            p {
+                                background-color: var(--shadow-color);
+                                color: var(--bg-color);
+                                border-radius: 2vw;
+                            }
+                            top: 35%;
+                            transform: translateY(-50%);
+                            font-weight: bold;
+                            color: #333;
+                            font-size: 2vw;
+                            @include myshadow(#333);
+                        }
+                    }
+                }
+                .carousel-control-next {
+                    transition: all ease-in-out 0.4s;
+                }
+                 .carousel-control-prev{
+                        transition: all ease-in-out 0.4s;
+                }
+                margin: 5vh 5vw;
+                width: 90vw;
+                height: fit-content;
+                max-height: 80vh;
+            }
+            .orginfo {
+                width: 90vw;
+                height: fit-content;
+                background-color: var(--shadow-color);
+                @include myboxshadow(var(--color5));
+                color: var(--text-color);
+                margin-top: 15vh;
+                margin-bottom: 5vh;
+                margin-left: 5vw;
+                padding: 10px;
+            }
+            .videos {
+                display: flex;
+                margin-top: 10vh;
+                flex-direction: column;
+                padding-left: 5vw;
+                .videocard {
+                    margin-top: 10vh;
+                    border-radius: 10px;
+                    width: 90vw;
+                    min-height: calc(60vw + 10px);
+                    background-color: var(--shadow-color);
+                    @include myboxshadow(var(--color1));
+                    iframe {
+                        border-radius: 10px;
+                        width: 96%;
+                        height: 50vw;
+                        margin-left: 2%;
+                    }
+                    p {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: var(--text-color);
+                        margin-bottom: 0;
+                        font-size: 3vw;
+                        width: 100%;
+                        min-height: calc(5vw + 20px);
+                    }
+                }
+            }
+            .cards {
+                display: grid;
+                width: 90vw;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: auto auto auto;
+                grid-gap: 4vw;
+                margin-left: 5vw;
+                margin-right: 5vw;
+                margin-bottom: 5vw;
+                margin-top: 10vh;
+
+                .card {
+                    padding-top: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+                    align-items: center;
+                    border-radius: 20px;
+                    background-color: var(--shadow-color);
+                    color: var(--text-color);
+                    img {
+                        width: 80%;
+                        max-width: 100px;
+                    }
+                }
+                .news {
+                    grid-row: 4/5;
+                    grid-column: 1/3;
+                    color: var(--text2);
+                    .title {
+                        width: 100%;
+                        border-bottom: 2px red solid;
+                        padding-bottom: 10px;
+                        margin-bottom: 20px;
+                        font-size: x-large;
+                    }
+                    .article {
+                        .article_desc {
+                            display: flex;
+                            width: 100%;
+                            .article_date {
+                                flex: 1;
+                                text-align: end;
+                            }
+                        }
+                        hr {
+                            background-color: var(--text2);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

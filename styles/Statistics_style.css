@@ -1,0 +1,424 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  --color1: #333;
+  --color2: rgb(141, 176, 177);
+  --color3: white;
+  --color4: #1b545e;
+  --color5: black;
+  --bg-color: var(--color2);
+  --text-color: white;
+  --text2: black;
+  --shadow-color: #333;
+}
+
+@media only screen and (min-width: 850px) {
+  body {
+    background-color: var(--bg-color);
+  }
+  body .nav {
+    max-height: auto;
+    width: 90vw;
+    margin-left: 5vw;
+    margin-top: 2vh;
+    border-radius: 50px;
+    padding: 10px 5vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 10px;
+    background-color: var(--shadow-color);
+    -webkit-filter: drop-shadow(2px 4px 8px #333);
+            filter: drop-shadow(2px 4px 8px #333);
+  }
+  body .nav .navlink {
+    width: 10vw;
+    text-align: center;
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.1vw;
+    -webkit-transition: all ease-in 0.3s;
+    transition: all ease-in 0.3s;
+  }
+  body .nav .navlink:hover {
+    -webkit-filter: drop-shadow(2px 4px 8px var(--text-color));
+            filter: drop-shadow(2px 4px 8px var(--text-color));
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  body .nav #theme {
+    width: 3vw;
+    max-width: 30px;
+    height: auto;
+    margin-right: -2vw;
+  }
+  body .nav #theme:hover {
+    -webkit-filter: drop-shadow(2px 4px 8px var(--text-color));
+            filter: drop-shadow(2px 4px 8px var(--text-color));
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  body .nav #menu {
+    display: none;
+  }
+  body .nav .logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 15px;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  body .nav .logo .logoname {
+    font-size: 1.1vw;
+    color: var(--text-color);
+    text-decoration: none;
+    -webkit-transition: all ease-in 0.3s;
+    transition: all ease-in 0.3s;
+  }
+  body .nav .logo .logoname:hover {
+    -webkit-filter: drop-shadow(2px 4px 8px var(--text-color));
+            filter: drop-shadow(2px 4px 8px var(--text-color));
+  }
+  body .nav .logo .logoicon {
+    min-height: 8vh;
+    max-height: 50px;
+    width: auto;
+    -webkit-transition: .5s;
+    transition: .5s;
+  }
+  body .nav .logo .logoicon:hover {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  body #menu_layout {
+    display: none;
+  }
+  body .footer {
+    background-color: black;
+    color: var(--bg-color);
+    min-height: 15vh;
+    bottom: 0;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-top: 5vh;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    gap: 5vw;
+  }
+  body .footer .espa, body .footer .euro, body .footer .ekstratia {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    gap: 10px;
+  }
+  body .footer .espa img, body .footer .euro img, body .footer .ekstratia img {
+    margin-top: 5px;
+    max-height: 40px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  body {
+    background-color: var(--bg-color);
+  }
+  body .nav {
+    max-height: auto;
+    width: 100vw;
+    padding: 10px 5vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 10px;
+    background-color: var(--shadow-color);
+    -webkit-filter: drop-shadow(2px 4px 8px #333);
+            filter: drop-shadow(2px 4px 8px #333);
+  }
+  body .nav .navlink {
+    display: none;
+  }
+  body .nav #theme {
+    width: 10vw;
+    max-width: 30px;
+    height: auto;
+  }
+  body .nav #menu {
+    width: 10vw;
+    max-width: 30px;
+    height: auto;
+    margin-right: -2vw;
+  }
+  body .nav .logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 15px;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  body .nav .logo .logoname {
+    font-size: 4vw;
+    color: var(--text-color);
+    text-decoration: none;
+    -webkit-transition: all ease-in 0.3s;
+    transition: all ease-in 0.3s;
+  }
+  body .nav .logo .logoicon {
+    min-height: 8vh;
+    max-height: 50px;
+    width: auto;
+    -webkit-transition: .5s;
+    transition: .5s;
+  }
+  body #menu_layout {
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 5vh;
+    text-align: center;
+    z-index: 100;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: var(--color1);
+    color: var(--color4);
+  }
+  body #menu_layout #close_menu {
+    position: fixed;
+    max-width: 30px;
+    height: auto;
+    top: 5vh;
+    right: 5vh;
+  }
+  body .footer {
+    background-color: black;
+    color: var(--bg-color);
+    min-height: 15vh;
+    bottom: 0;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-top: 5vh;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    gap: 5vw;
+  }
+  body .footer .espa, body .footer .euro, body .footer .ekstratia {
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    gap: 10px;
+    overflow-wrap: break-word;
+  }
+  body .footer .espa p, body .footer .euro p, body .footer .ekstratia p {
+    font-size: small;
+    word-wrap: break-word;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  body .footer .espa img, body .footer .euro img, body .footer .ekstratia img {
+    -ms-grid-column-align: center;
+        justify-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin-top: 5px;
+    max-height: 40px;
+  }
+}
+
+@media only screen and (min-width: 450px) and (max-width: 850px) {
+  body {
+    background-color: var(--bg-color);
+  }
+  body .nav {
+    max-height: auto;
+    width: 100vw;
+    padding: 10px 5vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 10px;
+    background-color: var(--shadow-color);
+    -webkit-filter: drop-shadow(2px 4px 8px #333);
+            filter: drop-shadow(2px 4px 8px #333);
+  }
+  body .nav .navlink {
+    display: none;
+  }
+  body .nav #theme {
+    width: 10vw;
+    max-width: 30px;
+    height: auto;
+  }
+  body .nav #menu {
+    width: 10vw;
+    max-width: 30px;
+    height: auto;
+    margin-right: -2vw;
+  }
+  body .nav .logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 15px;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  body .nav .logo .logoname {
+    font-size: 2vw;
+    color: var(--text-color);
+    text-decoration: none;
+    -webkit-transition: all ease-in 0.3s;
+    transition: all ease-in 0.3s;
+  }
+  body .nav .logo .logoicon {
+    min-height: 8vh;
+    max-height: 50px;
+    width: auto;
+    -webkit-transition: .5s;
+    transition: .5s;
+  }
+  body #menu_layout {
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 5vh;
+    text-align: center;
+    z-index: 100;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    font-size: 3vw;
+    background-color: var(--color1);
+    color: var(--color4);
+  }
+  body #menu_layout #close_menu {
+    position: fixed;
+    max-width: 30px;
+    height: auto;
+    top: 5vh;
+    right: 5vh;
+  }
+  body .footer {
+    background-color: black;
+    color: var(--bg-color);
+    min-height: 15vh;
+    bottom: 0;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-top: 5vh;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    gap: 5vw;
+  }
+  body .footer .espa, body .footer .euro, body .footer .ekstratia {
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    gap: 10px;
+    overflow-wrap: break-word;
+  }
+  body .footer .espa p, body .footer .euro p, body .footer .ekstratia p {
+    font-size: small;
+    word-wrap: break-word;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  body .footer .espa img, body .footer .euro img, body .footer .ekstratia img {
+    margin-top: 5px;
+    max-height: 40px;
+  }
+}
+/*# sourceMappingURL=Statistics_style.css.map */
