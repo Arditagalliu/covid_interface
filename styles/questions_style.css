@@ -421,4 +421,164 @@
     max-height: 40px;
   }
 }
+
+@media only screen and (min-width: 850px) {
+  .qpage {
+    width: 100%;
+    min-height: 90vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+  }
+  .qpage .qcontainer {
+    padding-top: 10vh;
+  }
+  .qpage .qcontainer .qdiv {
+    width: 95vw;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    border: 2px var(--shadow-color) solid;
+    margin-bottom: calc(2vh + 10px);
+  }
+  .qpage .qcontainer .qdiv .question {
+    margin-top: 0.1%;
+    margin-bottom: 0.1%;
+    width: 99.9%;
+    background-color: aqua;
+    -webkit-filter: drop-shadow(2px 4px 8px #333);
+            filter: drop-shadow(2px 4px 8px #333);
+    background-color: var(--shadow-color);
+    color: var(--text-color);
+    min-height: 10vh;
+    font-size: large;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 10px;
+    -webkit-transition: all ease-in-out 1s;
+    transition: all ease-in-out 1s;
+  }
+  .qpage .qcontainer .qdiv .question:hover:hover {
+    opacity: 0.6;
+  }
+  .qpage .qcontainer .qdiv .answer {
+    display: none;
+    -webkit-transition: all ease-in 1s;
+    transition: all ease-in 1s;
+    padding: 10px;
+    color: var(--text2);
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .qpage {
+    width: 100%;
+    min-height: 90vh;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+  }
+  .qpage .qcontainer {
+    padding-top: 10vh;
+  }
+  .qpage .qcontainer .qdiv {
+    width: 100vw;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin-bottom: calc(2vh + 10px);
+  }
+  .qpage .qcontainer .qdiv:hover .answer {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .qpage .qcontainer .qdiv .question {
+    margin-top: 0.1%;
+    margin-bottom: 0.1%;
+    width: 99.9%;
+    background-color: aqua;
+    -webkit-filter: drop-shadow(2px 4px 8px #333);
+            filter: drop-shadow(2px 4px 8px #333);
+    background-color: var(--shadow-color);
+    color: var(--text-color);
+    min-height: 10vh;
+    font-size: large;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 10px;
+    -webkit-transition: all ease-in-out 1s;
+    transition: all ease-in-out 1s;
+  }
+  .qpage .qcontainer .qdiv .answer {
+    display: none;
+    -webkit-transition: all ease-in 1s;
+    transition: all ease-in 1s;
+    padding: 10px;
+    color: var(--text2);
+  }
+}
+
+@media only screen and (min-width: 450px) and (max-width: 850px) {
+  .qpage {
+    width: 100%;
+    min-height: 90vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+  }
+  .qpage .qcontainer {
+    padding-top: 10vh;
+  }
+  .qpage .qcontainer .qdiv {
+    width: 95vw;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    border: 2px var(--shadow-color) solid;
+    margin-bottom: calc(2vh + 10px);
+  }
+  .qpage .qcontainer .qdiv:hover .answer {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .qpage .qcontainer .qdiv .question {
+    margin-top: 0.1%;
+    margin-bottom: 0.1%;
+    width: 99.9%;
+    background-color: aqua;
+    -webkit-filter: drop-shadow(2px 4px 8px #333);
+            filter: drop-shadow(2px 4px 8px #333);
+    background-color: var(--shadow-color);
+    color: var(--text-color);
+    min-height: 10vh;
+    font-size: large;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 10px;
+    -webkit-transition: all ease-in-out 1s;
+    transition: all ease-in-out 1s;
+  }
+  .qpage .qcontainer .qdiv .answer {
+    display: none;
+    -webkit-transition: all ease-in 1s;
+    transition: all ease-in 1s;
+    padding: 10px;
+    color: var(--text2);
+  }
+}
 /*# sourceMappingURL=questions_style.css.map */

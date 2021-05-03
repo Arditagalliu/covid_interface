@@ -1,13 +1,136 @@
 @import './style.scss';
 
 @media only screen and (min-width: 850px) {
-
+    .qpage {
+        width: 100%;
+        min-height: 90vh;
+        padding-left: 2vw;
+        padding-right: 2vw;
+        padding-top: 2vh;
+        padding-bottom: 2vh;
+        .qcontainer {
+            padding-top: 10vh;
+            .qdiv {
+                width: 95vw;
+                height: fit-content;
+                border: 2px var(--shadow-color) solid;
+                margin-bottom: calc(2vh + 10px);
+                .question {
+                    margin-top: 0.1%;
+                    margin-bottom: 0.1%;
+                    width: 99.9%;
+                    background-color: aqua;
+                    @include myshadow(#333);
+                    background-color: var(--shadow-color);
+                    color: var(--text-color);
+                    min-height: 10vh;
+                    font-size: large;
+                    display: flex;
+                    align-items: center;
+                    padding: 10px;
+                    transition: all ease-in-out 1s;
+                    &:hover {
+                        &:hover {
+                            opacity: 0.6;
+                        }
+                    }
+                }
+                .answer {
+                    display: none;
+                    transition: all ease-in 1s;
+                    padding: 10px;
+                    color: var(--text2);
+                }
+            }
+        }
+    }
 }
 
 @media only screen and (max-width: 450px) {
-
+    .qpage {
+        width: 100%;
+        min-height: 90vh;
+        padding-top: 2vh;
+        padding-bottom: 2vh;
+        .qcontainer {
+            padding-top: 10vh;
+            .qdiv {
+                width: 100vw;
+                height: fit-content;
+                margin-bottom: calc(2vh + 10px);
+                &:hover {
+                    .answer {
+                        height: fit-content;
+                    }
+                }
+                .question {
+                    margin-top: 0.1%;
+                    margin-bottom: 0.1%;
+                    width: 99.9%;
+                    background-color: aqua;
+                    @include myshadow(#333);
+                    background-color: var(--shadow-color);
+                    color: var(--text-color);
+                    min-height: 10vh;
+                    font-size: large;
+                    display: flex;
+                    align-items: center;
+                    padding: 10px;
+                    transition: all ease-in-out 1s;
+                }
+                .answer {
+                    display: none;
+                    transition: all ease-in 1s;
+                    padding: 10px;
+                    color: var(--text2);
+                }
+            }
+        }
+    }
 }
 
 @media only screen and (min-width: 450px) and (max-width: 850px) {
-    
+    .qpage {
+        width: 100%;
+        min-height: 90vh;
+        padding-left: 2vw;
+        padding-right: 2vw;
+        padding-top: 2vh;
+        padding-bottom: 2vh;
+        .qcontainer {
+            padding-top: 10vh;
+            .qdiv {
+                width: 95vw;
+                height: fit-content;
+                border: 2px var(--shadow-color) solid;
+                margin-bottom: calc(2vh + 10px);
+                &:hover {
+                    .answer {
+                        height: fit-content;
+                    }
+                }
+                .question {
+                    margin-top: 0.1%;
+                    margin-bottom: 0.1%;
+                    width: 99.9%;
+                    background-color: aqua;
+                    @include myshadow(#333);
+                    background-color: var(--shadow-color);
+                    color: var(--text-color);
+                    min-height: 10vh;
+                    font-size: large;
+                    display: flex;
+                    align-items: center;
+                    padding: 10px;
+                    transition: all ease-in-out 1s;
+                }
+                .answer {
+                    display: none;
+                    transition: all ease-in 1s;
+                    padding: 10px;
+                    color: var(--text2);
+                }
+            }
+        }
+    }
 }
