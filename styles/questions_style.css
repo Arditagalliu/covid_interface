@@ -9,7 +9,7 @@
   --color1: #333;
   --color2: rgb(141, 176, 177);
   --color3: white;
-  --color4: #1b545e;
+  --color4: #10728b;
   --color5: black;
   --bg-color: var(--color2);
   --text-color: white;
@@ -433,6 +433,11 @@
   }
   .qpage .qcontainer {
     padding-top: 10vh;
+    color: var(--text2);
+    font-size: larger;
+  }
+  .qpage .qcontainer hr {
+    background-color: var(--text2);
   }
   .qpage .qcontainer .qdiv {
     width: 95vw;
@@ -484,6 +489,12 @@
   }
   .qpage .qcontainer {
     padding-top: 10vh;
+    color: var(--text2);
+    font-size: larger;
+    text-align: center;
+  }
+  .qpage .qcontainer hr {
+    background-color: var(--text2);
   }
   .qpage .qcontainer .qdiv {
     width: 100vw;
@@ -498,6 +509,7 @@
     height: fit-content;
   }
   .qpage .qcontainer .qdiv .question {
+    text-align: start;
     margin-top: 0.1%;
     margin-bottom: 0.1%;
     width: 99.9%;
@@ -538,6 +550,11 @@
   }
   .qpage .qcontainer {
     padding-top: 10vh;
+    color: var(--text2);
+    font-size: larger;
+  }
+  .qpage .qcontainer hr {
+    background-color: var(--text2);
   }
   .qpage .qcontainer .qdiv {
     width: 95vw;

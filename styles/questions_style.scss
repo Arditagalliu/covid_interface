@@ -10,6 +10,11 @@
         padding-bottom: 2vh;
         .qcontainer {
             padding-top: 10vh;
+            color: var(--text2);
+            font-size: larger;
+            hr {
+                background-color: var(--text2);
+            }
             .qdiv {
                 width: 95vw;
                 height: fit-content;
@@ -54,6 +59,12 @@
         padding-bottom: 2vh;
         .qcontainer {
             padding-top: 10vh;
+            color: var(--text2);
+            font-size: larger;
+            text-align: center;
+            hr {
+                background-color: var(--text2);
+            }
             .qdiv {
                 width: 100vw;
                 height: fit-content;
@@ -64,6 +75,7 @@
                     }
                 }
                 .question {
+                    text-align: start;
                     margin-top: 0.1%;
                     margin-bottom: 0.1%;
                     width: 99.9%;
@@ -99,6 +111,11 @@
         padding-bottom: 2vh;
         .qcontainer {
             padding-top: 10vh;
+            color: var(--text2);
+            font-size: larger;
+            hr {
+                background-color: var(--text2);
+            }
             .qdiv {
                 width: 95vw;
                 height: fit-content;
