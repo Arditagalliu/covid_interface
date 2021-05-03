@@ -66,3 +66,47 @@ for (i = 0; i < acc.length; i++) {
     }
   });
 }
+
+
+$( "#submit_message" ).click(function() {
+    var inputname = $('#fname').val();
+    var inputsurname = $('#lname').val();
+    var inputmail = $('#mymail').val();
+    var inputphone = $('#myphone').val();
+    var inputmessage = $('#message').val();
+    if (inputname == '') {
+        alert('Το πεδίο Όνομα δέν μπορεί να είναι κενό');
+    }
+    else if (inputname.match(/[^Α-Ωα-ωA-Za-z]+/g)) {
+        alert('Το πεδίο Όνομα δέχεται μόνο γράμματα(λατινικά ή ελληνικά)');
+    }
+    else if (inputsurname == '') {
+        alert('Το πεδίο Επώνυμο δέν μπορεί να είναι κενό');
+    }
+    else if (inputsurname.match(/[^Α-Ωα-ωA-Za-z]+/g)) {
+        alert('Το πεδίο Επώνυμο δέχεται μόνο γράμματα(λατινικά ή ελληνικά)');
+    }
+    else if (!inputmail.match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)) {
+        alert('Αυτό το mail δεν είναι έγκυρο');
+    }
+    else if (inputmail == '') {
+        alert('Το πεδίο mail δέν μπορεί να είναι κενό');
+    }
+    else if (inputphone == '') {
+        alert('Το πεδίο κινητό δέν μπορεί να είναι κενό');
+    }
+    else if (inputphone.match(/[^0-9]+/g)) {
+        alert('Το πεδίο κινητό δέχεται μόνο αριθμούς');
+    }
+    else if (inputphone.length < 10) {
+        alert('Το πεδίο κινητό πρεπει να έχει ακριβώς 10 ψηφία');
+    }
+    else if (inputmessage.length < 10) {
+        alert('Το πεδίο μηνύματος πρεπει να έχει τουλάχιστον 10 χαρακτήρες');
+    }
+    else {
+        document.getElementById('contact_form').submit();
+        window.alert("Tο μήνυμα σας πήγε στους διαχειριστές και θα λαβετε σύντομα απάντηση");
+        location.href = 'HomePage.html';
+    }
+});
