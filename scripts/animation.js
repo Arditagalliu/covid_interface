@@ -111,29 +111,114 @@ $( "#submit_message" ).click(function() {
     }
 });
 
+$( "#female" ).click(function() {
+    if ($('#female').is(':checked')) {
+        $('#labelfemale').css('border', '2px var(--text-color) solid');
+        $('#labelmale').css('border', 'none');
+    }
+}
+);
+if ($('#female').is(':checked')) {
+    $('#labelfemale').css('border', '2px var(--text-color) solid');
+    $('#labelmale').css('border', 'none');
+}
+$( "#male" ).click(function() {
+    if ($('#male').is(':checked')) {
+        $('#labelmale').css('border', '2px var(--text-color) solid');
+        $('#labelfemale').css('border', 'none');
+    }
+}
+);
+if ($('#male').is(':checked')) {
+    $('#labelmale').css('border', '2px var(--text-color) solid');
+    $('#labelfemale').css('border', 'none');
+}
+
 $( "#submit_rantevou" ).click(function() {
-    var data = {
-        date_from: '2021-04-27',
-        date_to: '2021-04-30'
-    };
-    $.ajax({
-        url: 'https://us-central1-unipi-aps.cloudfunctions.net/emvolioDate', data : data,type: "POST",
-        // success: function(data, textStatus, xhr) {
-        //     console.log(xhr.status);
-        // },
-        complete: function(xhr, textStatus) {
-            console.log(xhr.status);
-            if (xhr.status == 500) {
-                window.alert("Το αίτημα σας δεν καταχωρήθηκε λόγο κάποιου σφάλματος");
-            }
-            else if (xhr.status == 400) {
-                window.alert("Το αίτημα σας καταχωρύθηκε αλλά απορίφθηκε");
-            }
-            else if (xhr.status == 200) {
-                window.alert("Το ραντεβού σας καταχωρήθηκε με επιτυχία");
-            }
-        } 
-    });
+    var inputname = $('#fname').val();
+    var inputsurname = $('#lname').val();
+    var inputmail = $('#mymail').val();
+    var inputphone = $('#myphone').val();
+    var inputamka = $('#amka').val();
+    var inputdate = $('#date').val();
+    var inputtime = $('#appt').val();
+    var inputgender;
+    if ($('#male').is(':checked')) {
+        inputgender = "male";
+    }
+    else {
+        inputgender = "female";
+    }
+    if (inputname == '') {
+        alert('Το πεδίο Όνομα δέν μπορεί να είναι κενό');
+    }
+    else if (inputname.match(/[^Α-Ωα-ωA-Za-z]+/g)) {
+        alert('Το πεδίο Όνομα δέχεται μόνο γράμματα(λατινικά ή ελληνικά)');
+    }
+    else if (inputsurname == '') {
+        alert('Το πεδίο Επώνυμο δέν μπορεί να είναι κενό');
+    }
+    else if (inputsurname.match(/[^Α-Ωα-ωA-Za-z]+/g)) {
+        alert('Το πεδίο Επώνυμο δέχεται μόνο γράμματα(λατινικά ή ελληνικά)');
+    }
+    else if (!inputamka) {
+        alert('Το ΑΜΚΑ είναι υποχρεωτικό');
+    }
+    else if (inputamka.match(/[^0-9]+/g)) {
+        alert('Το πεδίο ΑΜΚΑ δέχεται μόνο αριθμούς');
+    }
+    else if (inputamka.length < 11) {
+        alert('Το πεδίο ΑΜΚΑ πρεπει να έχει ακριβώς 11 ψηφία');
+    }
+    else if (!inputdate) {
+        console.log("date,",inputdate,",")
+    }
+    else if (!inputtime) {
+        console.log("time,",inputtime,",")
+    }
+    else if (!inputmail.match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)) {
+        alert('Αυτό το mail δεν είναι έγκυρο');
+    }
+    else if (inputmail == '') {
+        alert('Το πεδίο mail δέν μπορεί να είναι κενό');
+    }
+    else if (inputphone == '') {
+        alert('Το πεδίο κινητό δέν μπορεί να είναι κενό');
+    }
+    else if (inputphone.match(/[^0-9]+/g)) {
+        alert('Το πεδίο κινητό δέχεται μόνο αριθμούς');
+    }
+    else if (inputphone.length < 10) {
+        alert('Το πεδίο κινητό πρεπει να έχει ακριβώς 10 ψηφία');
+    }
+    else {
+        var data = {
+            name: inputname,
+            surname: inputsurname,
+            mail: inputmail,
+            phone: inputphone,
+            gender: inputgender,
+            amka: inputamka,
+            date: inputdate,
+            time: inputtime
+        };
+        console.log(data)
+        $.ajax({
+            url: 'https://us-central1-unipi-aps.cloudfunctions.net/emvolioDate', data : data,type: "POST",
+            complete: function(xhr,) {
+                console.log(xhr.status);
+                if (xhr.status == 500) {
+                    window.alert("Το αίτημα σας δεν καταχωρήθηκε λόγο κάποιου σφάλματος (status:"+xhr.status+")");
+                }
+                else if (xhr.status == 400) {
+                    window.alert("Το αίτημα σας καταχωρύθηκε αλλά απορίφθηκε (status:"+xhr.status+")");
+                }
+                else if (xhr.status == 200) {
+                    window.alert("Το ραντεβού σας καταχωρήθηκε με επιτυχία (status:"+xhr.status+")");
+                }
+            } 
+        });
+    }
 });
 
 

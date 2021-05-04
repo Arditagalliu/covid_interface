@@ -421,4 +421,876 @@
     max-height: 40px;
   }
 }
+
+@media only screen and (min-width: 850px) {
+  .rantevou {
+    min-height: 90vh;
+    width: 100%;
+    padding-top: 5vh;
+  }
+  .rantevou .datecontainer {
+    min-height: 75vh;
+    width: calc(100% - 40px);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    background-color: var(--shadow-color);
+    border-radius: 10px;
+    padding: 10px;
+  }
+  .rantevou .datecontainer p {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 7;
+    grid-column: 1/8;
+    border-bottom: 2px var(--text-color) solid;
+    color: var(--text-color);
+    font-size: large;
+    padding: 10px;
+  }
+  .rantevou .datecontainer .form_cont {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    min-height: 60vh;
+  }
+  .rantevou .datecontainer .form_cont .firstname {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 3;
+    grid-column: 2/5;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+  }
+  .rantevou .datecontainer .form_cont .firstname label {
+    display: inline-block;
+    padding: 10px;
+    font-size: medium;
+    border-radius: 0;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: 1px solid transparent;
+    background-color: var(--bg-color);
+    color: var(--text2);
+    margin-right: -5px;
+  }
+  .rantevou .datecontainer .form_cont .firstname input {
+    display: inline-block;
+    padding: 10px;
+    font-size: medium;
+    border-radius: 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: 1px solid transparent;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    -webkit-transition: all ease-in-out 0.5s;
+    transition: all ease-in-out 0.5s;
+  }
+  .rantevou .datecontainer .form_cont .firstname input:focus {
+    background-color: var(--text2);
+    color: var(--text-color);
+    outline: 0;
+  }
+  .rantevou .datecontainer .form_cont .lastname {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 3;
+    grid-column: 2/5;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+  }
+  .rantevou .datecontainer .form_cont .lastname label {
+    width: 30%;
+    max-width: -webkit-fit-content;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+    display: inline-block;
+    padding: 10px;
+    font-size: medium;
+    border-radius: 0;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: 1px solid transparent;
+    background-color: var(--bg-color);
+    color: var(--text2);
+    margin-right: -5px;
+  }
+  .rantevou .datecontainer .form_cont .lastname input {
+    width: 70%;
+    display: inline-block;
+    padding: 10px;
+    font-size: medium;
+    border-radius: 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: 1px solid transparent;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    -webkit-transition: all ease-in-out 0.5s;
+    transition: all ease-in-out 0.5s;
+  }
+  .rantevou .datecontainer .form_cont .lastname input:focus {
+    background-color: var(--text2);
+    color: var(--text-color);
+    outline: 0;
+  }
+  .rantevou .datecontainer .form_cont .mail {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 5;
+    grid-column: 2/7;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3/4;
+    width: 80%;
+  }
+  .rantevou .datecontainer .form_cont .mail label {
+    text-align: center;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    display: inline-block;
+    padding: 10px;
+    font-size: medium;
+    border-radius: 0;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: 1px solid transparent;
+    background-color: var(--bg-color);
+    color: var(--text2);
+    margin-right: -5px;
+  }
+  .rantevou .datecontainer .form_cont .mail input {
+    display: inline-block;
+    width: 80%;
+    padding: 10px;
+    font-size: medium;
+    border-radius: 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: 1px solid transparent;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    -webkit-transition: all ease-in-out 0.5s;
+    transition: all ease-in-out 0.5s;
+  }
+  .rantevou .datecontainer .form_cont .mail input:focus {
+    background-color: var(--text2);
+    color: var(--text-color);
+    outline: 0;
+  }
+  .rantevou .datecontainer .form_cont .phone {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 4;
+    grid-column: 2/6;
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    grid-row: 4/5;
+    width: 70%;
+  }
+  .rantevou .datecontainer .form_cont .phone label {
+    text-align: center;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    display: inline-block;
+    padding: 10px;
+    font-size: medium;
+    border-radius: 0;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: 1px solid transparent;
+    background-color: var(--bg-color);
+    color: var(--text2);
+    margin-right: -5px;
+  }
+  .rantevou .datecontainer .form_cont .phone input {
+    display: inline-block;
+    width: 70%;
+    padding: 10px;
+    font-size: medium;
+    border-radius: 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: 1px solid transparent;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    -webkit-transition: all ease-in-out 0.5s;
+    transition: all ease-in-out 0.5s;
+  }
+  .rantevou .datecontainer .form_cont .phone input:focus {
+    background-color: var(--text2);
+    color: var(--text-color);
+    outline: 0;
+  }
+  .rantevou .datecontainer .form_cont .amka {
+    text-align: right;
+    -ms-grid-column: 5;
+    -ms-grid-column-span: 3;
+    grid-column: 5/8;
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    grid-row: 4/5;
+    width: 100%;
+  }
+  .rantevou .datecontainer .form_cont .amka label {
+    text-align: center;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    display: inline-block;
+    padding: 10px;
+    font-size: medium;
+    border-radius: 0;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: 1px solid transparent;
+    background-color: var(--bg-color);
+    color: var(--text2);
+    margin-right: -5px;
+  }
+  .rantevou .datecontainer .form_cont .amka input {
+    display: inline-block;
+    width: 70%;
+    padding: 10px;
+    font-size: medium;
+    border-radius: 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: 1px solid transparent;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    -webkit-transition: all ease-in-out 0.5s;
+    transition: all ease-in-out 0.5s;
+  }
+  .rantevou .datecontainer .form_cont .amka input:focus {
+    background-color: var(--text2);
+    color: var(--text-color);
+    outline: 0;
+  }
+  .rantevou .datecontainer .form_cont .date {
+    text-align: right;
+    -ms-grid-column: 5;
+    -ms-grid-column-span: 3;
+    grid-column: 5/8;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+    width: 100%;
+  }
+  .rantevou .datecontainer .form_cont .date input {
+    width: 70%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--bg-color);
+    color: var(--text2);
+  }
+  .rantevou .datecontainer .form_cont .date input:focus {
+    background-color: var(--text2);
+    color: var(--bg-color);
+    outline: none;
+  }
+  .rantevou .datecontainer .form_cont .date input::-webkit-calendar-picker-indicator {
+    -webkit-filter: invert(0.5);
+            filter: invert(0.5);
+  }
+  .rantevou .datecontainer .form_cont .time {
+    text-align: right;
+    -ms-grid-column: 6;
+    -ms-grid-column-span: 2;
+    grid-column: 6/8;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+    width: 100%;
+  }
+  .rantevou .datecontainer .form_cont .time input {
+    width: 70%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--bg-color);
+    color: var(--text2);
+  }
+  .rantevou .datecontainer .form_cont .time input:focus {
+    background-color: var(--text2);
+    color: var(--bg-color);
+    outline: none;
+  }
+  .rantevou .datecontainer .form_cont .time input::-webkit-calendar-picker-indicator {
+    -webkit-filter: invert(0.5);
+            filter: invert(0.5);
+  }
+  .rantevou .datecontainer .form_cont .gender {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-grid-column: 6;
+    -ms-grid-column-span: 2;
+    grid-column: 6/8;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3/4;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+    margin-left: auto;
+  }
+  .rantevou .datecontainer .form_cont .gender input {
+    display: none;
+  }
+  .rantevou .datecontainer .form_cont .gender label {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--bg-color);
+    color: var(--text2);
+    margin-left: 10px;
+  }
+  .rantevou .datecontainer .form_cont .buttons {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 6;
+    grid-column: 2/8;
+  }
+  .rantevou .datecontainer .form_cont .buttons .btn-danger {
+    margin-right: auto;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .rantevou {
+    min-height: 90vh;
+    width: 100%;
+    padding-top: 5vh;
+  }
+  .rantevou .datecontainer {
+    min-height: 75vh;
+    width: calc(100% - 40px);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    background-color: var(--shadow-color);
+    border-radius: 10px;
+    padding: 10px;
+  }
+  .rantevou .datecontainer p {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 7;
+    grid-column: 1/8;
+    border-bottom: 2px var(--text-color) solid;
+    color: var(--text-color);
+    font-size: large;
+    padding: 10px;
+  }
+  .rantevou .datecontainer .form_cont {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: left;
+    min-height: 60vh;
+  }
+  .rantevou .datecontainer .form_cont .firstname label {
+    width: 100%;
+    padding: 10px;
+    font-size: medium;
+    border-radius: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: 1px solid transparent;
+    background-color: var(--bg-color);
+    color: var(--text2);
+    margin-bottom: -10px;
+  }
+  .rantevou .datecontainer .form_cont .firstname input {
+    width: 100%;
+    padding: 10px;
+    font-size: medium;
+    border-radius: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: 1px solid transparent;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    -webkit-transition: all ease-in-out 0.5s;
+    transition: all ease-in-out 0.5s;
+  }
+  .rantevou .datecontainer .form_cont .firstname input:focus {
+    background-color: var(--text2);
+    color: var(--text-color);
+    outline: 0;
+  }
+  .rantevou .datecontainer .form_cont .lastname {
+    margin-top: 10px;
+  }
+  .rantevou .datecontainer .form_cont .lastname label {
+    width: 100%;
+    padding: 10px;
+    font-size: medium;
+    border-radius: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: 1px solid transparent;
+    background-color: var(--bg-color);
+    color: var(--text2);
+    margin-bottom: -10px;
+  }
+  .rantevou .datecontainer .form_cont .lastname input {
+    width: 100%;
+    padding: 10px;
+    font-size: medium;
+    border-radius: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: 1px solid transparent;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    -webkit-transition: all ease-in-out 0.5s;
+    transition: all ease-in-out 0.5s;
+  }
+  .rantevou .datecontainer .form_cont .lastname input:focus {
+    background-color: var(--text2);
+    color: var(--text-color);
+    outline: 0;
+  }
+  .rantevou .datecontainer .form_cont .mail {
+    margin-top: 10px;
+  }
+  .rantevou .datecontainer .form_cont .mail label {
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    font-size: medium;
+    border-radius: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: 1px solid transparent;
+    background-color: var(--bg-color);
+    color: var(--text2);
+    margin-bottom: -10px;
+  }
+  .rantevou .datecontainer .form_cont .mail input {
+    width: 100%;
+    padding: 10px;
+    font-size: medium;
+    border-radius: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: 1px solid transparent;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    -webkit-transition: all ease-in-out 0.5s;
+    transition: all ease-in-out 0.5s;
+  }
+  .rantevou .datecontainer .form_cont .mail input:focus {
+    background-color: var(--text2);
+    color: var(--text-color);
+    outline: 0;
+  }
+  .rantevou .datecontainer .form_cont .phone {
+    margin-top: 10px;
+  }
+  .rantevou .datecontainer .form_cont .phone label {
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    font-size: medium;
+    border-radius: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: 1px solid transparent;
+    background-color: var(--bg-color);
+    color: var(--text2);
+    margin-bottom: -10px;
+  }
+  .rantevou .datecontainer .form_cont .phone input {
+    width: 100%;
+    padding: 10px;
+    font-size: medium;
+    border-radius: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: 1px solid transparent;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    -webkit-transition: all ease-in-out 0.5s;
+    transition: all ease-in-out 0.5s;
+  }
+  .rantevou .datecontainer .form_cont .phone input:focus {
+    background-color: var(--text2);
+    color: var(--text-color);
+    outline: 0;
+  }
+  .rantevou .datecontainer .form_cont .amka {
+    margin-top: 10px;
+  }
+  .rantevou .datecontainer .form_cont .amka label {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    font-size: medium;
+    border-radius: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: 1px solid transparent;
+    background-color: var(--bg-color);
+    color: var(--text2);
+    margin-bottom: -10px;
+  }
+  .rantevou .datecontainer .form_cont .amka input {
+    width: 100%;
+    padding: 10px;
+    font-size: medium;
+    border-radius: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: 1px solid transparent;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    -webkit-transition: all ease-in-out 0.5s;
+    transition: all ease-in-out 0.5s;
+  }
+  .rantevou .datecontainer .form_cont .amka input:focus {
+    background-color: var(--text2);
+    color: var(--text-color);
+    outline: 0;
+  }
+  .rantevou .datecontainer .form_cont .date {
+    margin-top: 10px;
+  }
+  .rantevou .datecontainer .form_cont .date input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--bg-color);
+    color: var(--text2);
+  }
+  .rantevou .datecontainer .form_cont .date input:focus {
+    background-color: var(--text2);
+    color: var(--bg-color);
+    outline: none;
+  }
+  .rantevou .datecontainer .form_cont .date input::-webkit-calendar-picker-indicator {
+    -webkit-filter: invert(0.5);
+            filter: invert(0.5);
+  }
+  .rantevou .datecontainer .form_cont .time {
+    margin-top: 10px;
+  }
+  .rantevou .datecontainer .form_cont .time input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--bg-color);
+    color: var(--text2);
+  }
+  .rantevou .datecontainer .form_cont .time input:focus {
+    background-color: var(--text2);
+    color: var(--bg-color);
+    outline: none;
+  }
+  .rantevou .datecontainer .form_cont .time input::-webkit-calendar-picker-indicator {
+    -webkit-filter: invert(0.5);
+            filter: invert(0.5);
+  }
+  .rantevou .datecontainer .form_cont .gender {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 10px;
+  }
+  .rantevou .datecontainer .form_cont .gender input {
+    display: none;
+  }
+  .rantevou .datecontainer .form_cont .gender label {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--bg-color);
+    color: var(--text2);
+    margin: auto;
+  }
+  .rantevou .datecontainer .form_cont .buttons {
+    margin-top: 20px;
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 450px) and (max-width: 850px) {
+  .rantevou {
+    min-height: 90vh;
+    width: 100%;
+    padding-top: 5vh;
+  }
+  .rantevou .datecontainer {
+    min-height: 75vh;
+    width: calc(100% - 40px);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    background-color: var(--shadow-color);
+    border-radius: 10px;
+    padding: 10px;
+  }
+  .rantevou .datecontainer p {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 7;
+    grid-column: 1/8;
+    border-bottom: 2px var(--text-color) solid;
+    color: var(--text-color);
+    font-size: large;
+    padding: 10px;
+  }
+  .rantevou .datecontainer .form_cont {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: left;
+    min-height: 60vh;
+  }
+  .rantevou .datecontainer .form_cont .firstname label {
+    display: inline-block;
+    padding: 10px;
+    font-size: medium;
+    border-radius: 0;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: 1px solid transparent;
+    background-color: var(--bg-color);
+    color: var(--text2);
+    margin-right: -5px;
+  }
+  .rantevou .datecontainer .form_cont .firstname input {
+    display: inline-block;
+    padding: 10px;
+    font-size: medium;
+    border-radius: 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: 1px solid transparent;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    -webkit-transition: all ease-in-out 0.5s;
+    transition: all ease-in-out 0.5s;
+  }
+  .rantevou .datecontainer .form_cont .firstname input:focus {
+    background-color: var(--text2);
+    color: var(--text-color);
+    outline: 0;
+  }
+  .rantevou .datecontainer .form_cont .lastname label {
+    width: 30%;
+    max-width: -webkit-fit-content;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+    display: inline-block;
+    padding: 10px;
+    font-size: medium;
+    border-radius: 0;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: 1px solid transparent;
+    background-color: var(--bg-color);
+    color: var(--text2);
+    margin-right: -5px;
+  }
+  .rantevou .datecontainer .form_cont .lastname input {
+    width: 70%;
+    display: inline-block;
+    padding: 10px;
+    font-size: medium;
+    border-radius: 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: 1px solid transparent;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    -webkit-transition: all ease-in-out 0.5s;
+    transition: all ease-in-out 0.5s;
+  }
+  .rantevou .datecontainer .form_cont .lastname input:focus {
+    background-color: var(--text2);
+    color: var(--text-color);
+    outline: 0;
+  }
+  .rantevou .datecontainer .form_cont .mail label {
+    text-align: center;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    display: inline-block;
+    padding: 10px;
+    font-size: medium;
+    border-radius: 0;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: 1px solid transparent;
+    background-color: var(--bg-color);
+    color: var(--text2);
+    margin-right: -5px;
+  }
+  .rantevou .datecontainer .form_cont .mail input {
+    display: inline-block;
+    width: 80%;
+    padding: 10px;
+    font-size: medium;
+    border-radius: 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: 1px solid transparent;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    -webkit-transition: all ease-in-out 0.5s;
+    transition: all ease-in-out 0.5s;
+  }
+  .rantevou .datecontainer .form_cont .mail input:focus {
+    background-color: var(--text2);
+    color: var(--text-color);
+    outline: 0;
+  }
+  .rantevou .datecontainer .form_cont .phone label {
+    text-align: center;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    display: inline-block;
+    padding: 10px;
+    font-size: medium;
+    border-radius: 0;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: 1px solid transparent;
+    background-color: var(--bg-color);
+    color: var(--text2);
+    margin-right: -5px;
+  }
+  .rantevou .datecontainer .form_cont .phone input {
+    display: inline-block;
+    width: 70%;
+    padding: 10px;
+    font-size: medium;
+    border-radius: 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: 1px solid transparent;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    -webkit-transition: all ease-in-out 0.5s;
+    transition: all ease-in-out 0.5s;
+  }
+  .rantevou .datecontainer .form_cont .phone input:focus {
+    background-color: var(--text2);
+    color: var(--text-color);
+    outline: 0;
+  }
+  .rantevou .datecontainer .form_cont .amka label {
+    text-align: center;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    display: inline-block;
+    padding: 10px;
+    font-size: medium;
+    border-radius: 0;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: 1px solid transparent;
+    background-color: var(--bg-color);
+    color: var(--text2);
+    margin-right: -5px;
+  }
+  .rantevou .datecontainer .form_cont .amka input {
+    display: inline-block;
+    width: 70%;
+    padding: 10px;
+    font-size: medium;
+    border-radius: 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: 1px solid transparent;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    -webkit-transition: all ease-in-out 0.5s;
+    transition: all ease-in-out 0.5s;
+  }
+  .rantevou .datecontainer .form_cont .amka input:focus {
+    background-color: var(--text2);
+    color: var(--text-color);
+    outline: 0;
+  }
+  .rantevou .datecontainer .form_cont .date input {
+    width: 70%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--bg-color);
+    color: var(--text2);
+  }
+  .rantevou .datecontainer .form_cont .date input:focus {
+    background-color: var(--text2);
+    color: var(--bg-color);
+    outline: none;
+  }
+  .rantevou .datecontainer .form_cont .date input::-webkit-calendar-picker-indicator {
+    -webkit-filter: invert(0.5);
+            filter: invert(0.5);
+  }
+  .rantevou .datecontainer .form_cont .time {
+    margin-top: 10px;
+  }
+  .rantevou .datecontainer .form_cont .time input {
+    width: 70%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--bg-color);
+    color: var(--text2);
+  }
+  .rantevou .datecontainer .form_cont .time input:focus {
+    background-color: var(--text2);
+    color: var(--bg-color);
+    outline: none;
+  }
+  .rantevou .datecontainer .form_cont .time input::-webkit-calendar-picker-indicator {
+    -webkit-filter: invert(0.5);
+            filter: invert(0.5);
+  }
+  .rantevou .datecontainer .form_cont .gender {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 10px;
+  }
+  .rantevou .datecontainer .form_cont .gender input {
+    display: none;
+  }
+  .rantevou .datecontainer .form_cont .gender label {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--bg-color);
+    color: var(--text2);
+    margin-left: 10px;
+  }
+  .rantevou .datecontainer .form_cont .buttons {
+    text-align: center;
+  }
+}
 /*# sourceMappingURL=date_style.css.map */
