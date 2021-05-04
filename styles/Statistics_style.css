@@ -291,7 +291,7 @@
   }
   body .nav {
     max-height: auto;
-    width: 100vw;
+    width: 100%;
     padding: 10px 5vw;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -419,6 +419,205 @@
   body .footer .espa img, body .footer .euro img, body .footer .ekstratia img {
     margin-top: 5px;
     max-height: 40px;
+  }
+}
+
+@media only screen and (min-width: 850px) {
+  .statistics {
+    width: 90%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5vh;
+    padding: 10px;
+  }
+  .statistics input {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--shadow-color);
+    color: var(--bg-color);
+  }
+  .statistics input:focus {
+    background-color: var(--text2);
+    outline: none;
+  }
+  .statistics input::-webkit-calendar-picker-indicator {
+    -webkit-filter: invert(0.5);
+            filter: invert(0.5);
+  }
+  .statistics label {
+    color: var(--text2);
+  }
+  .statistics .btn {
+    padding: 10px;
+  }
+  .statisticsdiv {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    padding: 20px 10px;
+    min-height: 60vh;
+    margin-bottom: 10vh;
+    margin-top: 5vh;
+    background-color: var(--shadow-color);
+    border-radius: 10px;
+  }
+  .statisticsdiv p {
+    border-bottom: 2px var(--text-color) solid;
+    color: var(--text-color);
+    font-size: large;
+    padding: 10px;
+  }
+  .statisticsdiv .table {
+    color: var(--text-color);
+    border-radius: 10px;
+    height: 100%;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .statistics {
+    width: 100%;
+    min-height: 65vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 5vh;
+    padding: 10px;
+  }
+  .statistics input {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--shadow-color);
+    color: var(--bg-color);
+    margin-bottom: 10px;
+  }
+  .statistics input:focus {
+    background-color: var(--text2);
+    outline: none;
+  }
+  .statistics input::-webkit-calendar-picker-indicator {
+    -webkit-filter: invert(0.5);
+            filter: invert(0.5);
+  }
+  .statistics label {
+    color: var(--text2);
+  }
+  .statistics .btn {
+    padding: 10px;
+  }
+  .statisticsdiv {
+    width: calc(100%);
+    min-height: 35vh;
+    margin-bottom: 10vh;
+    margin-top: 5vh;
+  }
+  .statisticsdiv p {
+    border-bottom: 2px var(--text2) solid;
+    color: var(--text2);
+    font-size: small;
+    padding: 10px;
+  }
+  .statisticsdiv .table {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: xx-small;
+    color: var(--text-color);
+  }
+}
+
+@media only screen and (min-width: 450px) and (max-width: 850px) {
+  .statistics {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 5vh;
+    padding: 10px;
+  }
+  .statistics input {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--shadow-color);
+    color: var(--bg-color);
+    margin-bottom: 10px;
+  }
+  .statistics input:focus {
+    background-color: var(--text2);
+    outline: none;
+  }
+  .statistics input::-webkit-calendar-picker-indicator {
+    -webkit-filter: invert(0.5);
+            filter: invert(0.5);
+  }
+  .statistics label {
+    color: var(--text2);
+  }
+  .statistics .btn {
+    padding: 10px;
+  }
+  .statisticsdiv {
+    width: calc(100% -20px);
+    margin: 20px 10px;
+    min-height: 35vh;
+    margin-bottom: 10vh;
+    margin-top: 5vh;
+    background-color: var(--shadow-color);
+    border-radius: 10px;
+    padding: 10px;
+  }
+  .statisticsdiv p {
+    border-bottom: 2px var(--text-color) solid;
+    color: var(--text-color);
+    font-size: large;
+    padding: 10px;
+  }
+  .statisticsdiv .table {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: small;
+    color: var(--text-color);
+    border-radius: 10px;
+    height: 100%;
   }
 }
 /*# sourceMappingURL=Statistics_style.css.map */

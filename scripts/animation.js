@@ -110,3 +110,160 @@ $( "#submit_message" ).click(function() {
         location.href = 'HomePage.html';
     }
 });
+
+$( "#submit_rantevou" ).click(function() {
+    var data = {
+        date_from: '2021-04-27',
+        date_to: '2021-04-30'
+    };
+    $.ajax({
+        url: 'https://us-central1-unipi-aps.cloudfunctions.net/emvolioDate', data : data,type: "POST",
+        // success: function(data, textStatus, xhr) {
+        //     console.log(xhr.status);
+        // },
+        complete: function(xhr, textStatus) {
+            console.log(xhr.status);
+            if (xhr.status == 500) {
+                window.alert("Το αίτημα σας δεν καταχωρήθηκε λόγο κάποιου σφάλματος");
+            }
+            else if (xhr.status == 400) {
+                window.alert("Το αίτημα σας καταχωρύθηκε αλλά απορίφθηκε");
+            }
+            else if (xhr.status == 200) {
+                window.alert("Το ραντεβού σας καταχωρήθηκε με επιτυχία");
+            }
+        } 
+    });
+});
+
+
+$( "#submit_statistics" ).click(function() {    
+    var data = {
+        date_from: $('#start').val(),
+        date_to: $('#end').val()
+    };
+    $.ajax({
+        url: 'https://data.gov.gr/api/v1/query/mdg_emvolio', data : data, headers: {
+        "Authorization": "Token 67b4e691b907faee4b61004b4c179740b6fbd3dd"
+        },
+        success: function(data) {
+        console.log(data);
+        var datechecker = data[0].referencedate;
+        var count = 0;
+        var todaytotal = [];
+        todaytotal[0] = 0;
+        var total = [];
+        total[0] = 0;
+        var todaydose1 = [];
+        todaydose1[0] = 0;
+        var todaydose2 = [];
+        todaydose2[0] = 0;
+        var mydates = [];
+        mydates[0] = data[0].referencedate;
+        for (const property in data) {
+            if (data[property].referencedate == datechecker) {
+                todaytotal[count] = todaytotal[count] + parseInt(data[property].daytotal);
+                total[count] = total[count] + parseInt(data[property].totalvaccinations);
+                todaydose1[count] = todaydose1[count] + parseInt(data[property].dailydose1);
+                todaydose2[count] = todaydose2[count] + parseInt(data[property].dailydose2);
+            }
+            else {
+                datechecker = data[property].referencedate
+                count = count + 1;
+                todaytotal[count] = parseInt(data[property].daytotal);
+                mydates[count] = (data[property].referencedate);
+                total[count] = parseInt(data[property].totalvaccinations);
+                todaydose1[count] = parseInt(data[property].dailydose1);
+                todaydose2[count] = parseInt(data[property].dailydose2);
+            }
+        }
+        $("tbody").html("");
+        var len = todaytotal.length;
+        for (const day in todaytotal) {
+            for(var j = 0 ; j < len - day - 1; j++){
+                if (parseInt(mydates[j].substr(0,4)) > parseInt(mydates[j + 1].substr(0,4))) {
+                    var temp = mydates[j];
+                    mydates[j] = mydates[j + 1];
+                    mydates[j + 1] = temp;
+
+                    temp = todaytotal[j];
+                    todaytotal[j] = todaytotal[j + 1];
+                    todaytotal[j + 1] = temp;
+
+                    temp = todaydose1[j];
+                    todaydose1[j] = todaydose1[j + 1];
+                    todaydose1[j + 1] = temp;
+                    
+                    temp = todaydose2[j];
+                    todaydose2[j] = todaydose2[j + 1];
+                    todaydose2[j + 1] = temp;
+
+                    temp = total[j];
+                    total[j] = total[j + 1];
+                    total[j + 1] = temp;
+                }
+            }
+        }
+        for (const day in todaytotal) {
+            for(var j = 0 ; j < len - day - 1; j++){
+                if ((parseInt(mydates[j].substr(5,2)) > parseInt(mydates[j + 1].substr(5,2))) && (parseInt(mydates[j].substr(0,4)) == parseInt(mydates[j + 1].substr(0,4)))) {
+                    var temp = mydates[j];
+                    mydates[j] = mydates[j + 1];
+                    mydates[j + 1] = temp;
+
+                    temp = todaytotal[j];
+                    todaytotal[j] = todaytotal[j + 1];
+                    todaytotal[j + 1] = temp;
+
+                    temp = todaydose1[j];
+                    todaydose1[j] = todaydose1[j + 1];
+                    todaydose1[j + 1] = temp;
+                    
+                    temp = todaydose2[j];
+                    todaydose2[j] = todaydose2[j + 1];
+                    todaydose2[j + 1] = temp;
+
+                    temp = total[j];
+                    total[j] = total[j + 1];
+                    total[j + 1] = temp;
+                }
+            }
+        }
+        for (const day in todaytotal) {
+            for(var j = 0 ; j < len - day - 1; j++){
+                if ((parseInt(mydates[j].substr(5,2)) == parseInt(mydates[j + 1].substr(5,2))) && (parseInt(mydates[j].substr(0,4)) == parseInt(mydates[j + 1].substr(0,4))) && (parseInt(mydates[j].substr(8,2)) > parseInt(mydates[j + 1].substr(8,2)))) {
+                    var temp = mydates[j];
+                    mydates[j] = mydates[j + 1];
+                    mydates[j + 1] = temp;
+
+                    temp = todaytotal[j];
+                    todaytotal[j] = todaytotal[j + 1];
+                    todaytotal[j + 1] = temp;
+
+                    temp = todaydose1[j];
+                    todaydose1[j] = todaydose1[j + 1];
+                    todaydose1[j + 1] = temp;
+                    
+                    temp = todaydose2[j];
+                    todaydose2[j] = todaydose2[j + 1];
+                    todaydose2[j + 1] = temp;
+
+                    temp = total[j];
+                    total[j] = total[j + 1];
+                    total[j + 1] = temp;
+                }
+            }
+        }
+        for (const day in todaytotal) {
+            $("tbody").append(
+                '<tr><th scope="row">' + mydates[day].substr(0,10) +
+                '</th><td>' + todaytotal[day] + 
+                '</td><td>' + todaydose1[day] + 
+                '</td><td>' + todaydose2[day] + 
+                '</td><td>' + total[day] + 
+                '</td></tr>'
+            );
+        }
+        }
+    });
+});

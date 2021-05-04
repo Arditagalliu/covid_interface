@@ -1,13 +1,172 @@
 @import './style.scss';
 
 @media only screen and (min-width: 850px) {
-
+    .statistics {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5vh;
+        padding: 10px;
+        input {
+            
+            margin-left: 10px;
+            margin-right: 10px;
+            padding:10px;
+            border-radius:10px;
+            border:none;
+            background-color:var(--shadow-color);
+            color: var(--bg-color);
+            &:focus {
+                background-color: var(--text2);
+                outline: none;
+            }
+            &::-webkit-calendar-picker-indicator {
+                filter: invert(0.5);
+            }
+        }
+        label {
+            color: var(--text2);
+        }
+        .btn {
+            padding: 10px;
+        }
+    }
+    .statisticsdiv {
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+        padding: 20px 10px;
+        min-height: 60vh;
+        margin-bottom: 10vh;
+        margin-top: 5vh;
+        background-color: var(--shadow-color);
+        border-radius: 10px;
+        p {
+            border-bottom: 2px var(--text-color) solid;
+            color: var(--text-color);
+            font-size: large;
+            padding: 10px;
+        }
+        .table {
+            color: var(--text-color);
+            border-radius: 10px;
+            height: 100%;
+        }
+    }
 }
 
 @media only screen and (max-width: 450px) {
-
+    .statistics {
+        width: 100%;
+        min-height: 65vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5vh;
+        padding: 10px;
+        input {
+            
+            margin-left: 10px;
+            margin-right: 10px;
+            padding:10px;
+            border-radius:10px;
+            border:none;
+            background-color:var(--shadow-color);
+            color: var(--bg-color);
+            margin-bottom: 10px;
+            &:focus {
+                background-color: var(--text2);
+                outline: none;
+            }
+            &::-webkit-calendar-picker-indicator {
+                filter: invert(0.5);
+            }
+        }
+        label {
+            color: var(--text2);
+        }
+        .btn {
+            padding: 10px;
+        }
+    }
+    .statisticsdiv {
+        width: calc(100%);
+        min-height: 35vh;
+        margin-bottom: 10vh;
+        margin-top: 5vh;
+        p {
+            border-bottom: 2px var(--text2) solid;
+            color: var(--text2);
+            font-size: small;
+            padding: 10px;
+        }
+        .table {
+            align-items: center;
+            font-size: xx-small;
+            color: var(--text-color);
+        }
+    }
 }
 
 @media only screen and (min-width: 450px) and (max-width: 850px) {
-    
+    .statistics {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5vh;
+        padding: 10px;
+        input {
+            
+            margin-left: 10px;
+            margin-right: 10px;
+            padding:10px;
+            border-radius:10px;
+            border:none;
+            background-color:var(--shadow-color);
+            color: var(--bg-color);
+            margin-bottom: 10px;
+            &:focus {
+                background-color: var(--text2);
+                outline: none;
+            }
+            &::-webkit-calendar-picker-indicator {
+                filter: invert(0.5);
+            }
+        }
+        label {
+            color: var(--text2);
+        }
+        .btn {
+            padding: 10px;
+        }
+    }
+    .statisticsdiv {
+        width: calc(100% -20px);
+        margin: 20px 10px;
+        min-height: 35vh;
+        margin-bottom: 10vh;
+        margin-top: 5vh;
+        background-color: var(--shadow-color);
+        border-radius: 10px;
+        padding: 10px;
+        p {
+            border-bottom: 2px var(--text-color) solid;
+            color: var(--text-color);
+            font-size: large;
+            padding: 10px;
+        }
+        .table {
+            align-items: center;
+            font-size: small;
+            color: var(--text-color);
+            border-radius: 10px;
+            height: 100%;
+        }
+    }
 }
