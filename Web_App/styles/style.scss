@@ -1,0 +1,349 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+//this scss scripts works as a template that the rest scss scripts inherit
+//in here i styled the navbar and the footer as whell as the menu layout for mobiles
+//the mixin below is a reusable snippet for making shadow in the shape of a text or an icon
+@mixin myshadow($color) {
+    filter: drop-shadow(2px 4px 8px $color);
+}
+//the mixin below is a reusable snippet for making card shadows
+@mixin myboxshadow($color) {
+    box-shadow: 2px 4px 8px 3px $color, 4px 6px 20px 3px rgba(0, 0, 0, 0.19);
+}
+//here are the color variables that are used to switch between themes
+//we actually have a pack of color variables
+//and a pack of variables that get their value from the previous variables
+:root {
+    --color1: #333;
+    --color2: rgb(141, 176, 177);
+    --color3: white;
+    --color4: #10728b;
+    --color5: black;
+    --bg-color: var(--color2);
+  --text-color: white;
+  --text2: black;
+  --shadow-color: #333;
+}
+//media query for pcs
+@media only screen and (min-width: 850px) {
+    body {
+        background-color: var(--bg-color);
+        //the navbar styling
+        //all the nav components are hoverable 
+        .nav {
+            max-height: auto;
+            width: 90vw;
+            margin-left: 5vw;
+            margin-top: 2vh;
+            border-radius: 50px;
+            padding: 10px 5vw;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background-color: var(--shadow-color);
+            @include myshadow(#333);
+            .navlink {
+                width: 10vw;
+                text-align: center;
+                text-decoration: none;
+                color: var(--text-color);
+                font-size: 1.1vw;
+                transition: all ease-in 0.3s;
+                &:hover {
+                    @include myshadow(var(--text-color));
+                    transform: scale(1.1);
+                }
+            }
+            //the theme button styling
+            #theme {
+                width: 3vw;
+                max-width: 30px;
+                height: auto;
+                margin-right: -2vw;
+                &:hover {
+                    @include myshadow(var(--text-color));
+                    transform: scale(1.1);
+                }
+            }
+            //the button that brings the menu layout is not displayed because is useless here
+            #menu {
+                display: none;
+            }
+            //the logo styling
+            .logo {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                flex: 1;
+                .logoname {
+                    font-size: 1.1vw;
+                    color: var(--text-color);
+                    text-decoration: none;
+                    transition: all ease-in 0.3s;
+                    &:hover {
+                        @include myshadow(var(--text-color));
+                    }
+                }
+                .logoicon {
+                    min-height: 8vh;
+                    max-height: 50px;
+                    width: auto;
+                    transition: .5s;
+                    &:hover {
+                        transform: rotate(360deg);
+                    }
+                }
+            }
+        }
+        //the menu for mobile devices is not displayed on pcs
+        #menu_layout {
+            display: none;
+        }
+        //the footer is a flex of three sections
+        .footer {
+            background-color: black;
+            color: var(--bg-color);
+            min-height: 15vh;
+            bottom: 0;
+            width: 100%;
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            padding-top: 5vh;
+            padding-left: 5vw;
+            padding-right: 5vw;
+            gap: 5vw;
+            //the footer sections
+            .espa, .euro, .ekstratia {
+                display: flex;
+                flex: 1;
+                gap: 10px;
+                img {
+                    margin-top: 5px;
+                    max-height: 40px;
+                }
+            }
+        }
+    }
+}
+//media query for smartphones
+@media only screen and (max-width: 450px) {
+    body {
+        background-color: var(--bg-color);
+        .nav {
+            max-height: auto;
+            width: 100vw;
+            padding: 10px 5vw;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background-color: var(--shadow-color);
+            @include myshadow(#333);
+            //all the links of the nav except the logo are not displayed anymore
+            //because now we have the menu layout
+            .navlink {
+                display: none;
+            }
+            //the theme button is displayed in the end of the nav
+            #theme {
+                width: 10vw;
+                max-width: 30px;
+                height: auto;
+            }
+            //the menu button is displayed in the end of the nav
+            #menu {
+                width: 10vw;
+                max-width: 30px;
+                height: auto;
+                margin-right: -2vw;
+            }
+            //the logo stays the same but smaller
+            .logo {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                flex: 1;
+                .logoname {
+                    font-size: 4vw;
+                    color: var(--text-color);
+                    text-decoration: none;
+                    transition: all ease-in 0.3s;
+                }
+                .logoicon {
+                    min-height: 8vh;
+                    max-height: 50px;
+                    width: auto;
+                    transition: .5s;
+                }
+            }
+        }
+        //the menu layout is a div that fills the whole screen and holds the links
+        //for the navigation giving us a more responsive design
+        //its only displayed by clicking the menu button
+        #menu_layout {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 5vh;
+            text-align: center;
+            z-index: 100;
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            top: 0;
+            left: 0;
+            background-color: var(--color1);
+            color: var(--color4);
+            #close_menu {
+                position: fixed;
+                max-width: 30px;
+                height: auto;
+                top: 5vh;
+                right: 5vh;
+            }
+        }
+        //the footer is the same but the flex direction is in column
+        .footer {
+            background-color: black;
+            color: var(--bg-color);
+            min-height: 15vh;
+            bottom: 0;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            justify-content: center;
+            padding-top: 5vh;
+            padding-left: 10vw;
+            padding-right: 10vw;
+            gap: 5vw;
+            .espa, .euro, .ekstratia {
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                flex: 1;
+                gap: 10px;
+                overflow-wrap: break-word;
+                p {
+                    font-size: small;
+                    word-wrap: break-word;
+                    flex: 1;
+                }
+                img {
+                    justify-self: center;
+                    align-self: center;
+                    margin-top: 5px;
+                    max-height: 40px;
+                }
+            }
+        }
+    }
+}
+//media query for tablets
+//its the same with the mobile design but with apapted sizes
+@media only screen and (min-width: 450px) and (max-width: 850px) {
+    body {
+        background-color: var(--bg-color);
+        .nav {
+            max-height: auto;
+            width: 100%;
+            padding: 10px 5vw;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background-color: var(--shadow-color);
+            @include myshadow(#333);
+            .navlink {
+                display: none;
+            }
+            #theme {
+                width: 10vw;
+                max-width: 30px;
+                height: auto;
+            }
+            #menu {
+                width: 10vw;
+                max-width: 30px;
+                height: auto;
+                margin-right: -2vw;
+            }
+            .logo {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                flex: 1;
+                .logoname {
+                    font-size: 2vw;
+                    color: var(--text-color);
+                    text-decoration: none;
+                    transition: all ease-in 0.3s;
+                }
+                .logoicon {
+                    min-height: 8vh;
+                    max-height: 50px;
+                    width: auto;
+                    transition: .5s;
+                }
+            }
+        }
+        #menu_layout {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 5vh;
+            text-align: center;
+            z-index: 100;
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            top: 0;
+            left: 0;
+            font-size: 3vw;
+            background-color: var(--color1);
+            color: var(--color4);
+            #close_menu {
+                position: fixed;
+                max-width: 30px;
+                height: auto;
+                top: 5vh;
+                right: 5vh;
+            }
+        }
+        .footer {
+            background-color: black;
+            color: var(--bg-color);
+            min-height: 15vh;
+            bottom: 0;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            justify-content: center;
+            padding-top: 5vh;
+            padding-left: 10vw;
+            padding-right: 10vw;
+            gap: 5vw;
+            .espa, .euro, .ekstratia {
+                text-align: center;
+                display: flex;
+                flex: 1;
+                gap: 10px;
+                overflow-wrap: break-word;
+                p {
+                    font-size: small;
+                    word-wrap: break-word;
+                    flex: 1;
+                }
+                img {
+                    margin-top: 5px;
+                    max-height: 40px;
+                }
+            }
+        }
+    }
+}

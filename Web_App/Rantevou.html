@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<!--footer, navbar, head and menu layout are the same as 
+    the homepage so the comments are needless 
+    for them for i already commented them there-->
+<html lang="gr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info Covid-19</title>
+    <link rel="icon" type="image/png" href="images/mask.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" 
+        crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles/date_style.css">
+</head>
+<body>
+    <div class="nav">
+        <div class="logo">
+            <img src="images/logo.svg" alt="logo" class="logoicon">
+            <a href="HomePage.html" class="logoname">
+                Εθνικός Οργανισμός <br>Εμβολιασμού
+            </a>
+        </div>
+        <a href="News.html" class="navlink">Νέα</a>
+        <a href="Questions.html" class="navlink">Eρωτήσεις</a>
+        <a href="Rantevou.html" class="navlink">Ραντεβού</a>
+        <a href="Statistics.html" class="navlink">Στατιστικά</a>
+        <a href="Contact.html" class="navlink">Επικοινωνία</a>
+        <img src="images/darkmode.png" id="theme">
+        <img src="images/menu.png" id="menu">
+    </div>
+    <div id="menu_layout">
+        <a href="News.html" class="menulink">Τα Νέα μας</a>
+        <a href="Questions.html" class="menulink">Eρωτήσεις</a>
+        <a href="Rantevou.html" class="menulink">Ραντεβού</a>
+        <a href="Statistics.html" class="menulink">Στατιστικά</a>
+        <a href="Contact.html" class="menulink">Επικοινωνία</a>
+        <img src="images/close.png" id="close_menu">
+    </div>
+    <!--this div holds the main page-->
+    <div class="rantevou">
+        <div class="datecontainer">
+            <!--the title of the page or a welcoming message-->
+            <p>Κλείστε γρήγορα ραντεβού</p>
+            <!--the form for the date -->
+            <form id="rantevou_form">
+                <!--the container that styles the form(grid or flex)-->
+                <div class="form_cont">
+                    <!--the name of the person-->
+                    <div class="firstname">
+                        <label for="fname">Όνομα*:</label>
+                        <input type="text" id="fname" name="fname" placeholder="π.χ. Γιάννης">
+                    </div>
+                    <!--the surname of the person-->
+                    <div class="lastname">
+                        <label for="lname">Επώνυμο*:</label>
+                        <input type="text" id="lname" name="lname" placeholder="π.χ. Μπέκας">
+                    </div>
+                    <!--the email address-->
+                    <div class="mail">
+                        <label for="mymail">Εmail*:</label>
+                        <input type="mail" id="mymail" name="mymail" placeholder="π.χ. johnbekas@gmail.com">
+                    </div>
+                    <!--the phone number-->
+                    <div class="phone" >
+                        <label for="myphone">Κινητό*:</label>
+                        <input type="tel" id="myphone" name="myphone" maxlength="10" placeholder="π.χ. 6945365382">
+                    </div>
+                    <!--the amka of the person-->
+                    <div class="amka" >
+                        <label for="amka">ΑΜΚΑ*:</label>
+                        <input type="tel" id="amka" name="amka" maxlength="11" placeholder="π.χ. 23129902545">
+                    </div>
+                    <!--the date he wants there is one already inserted-->
+                    <div class="date" >
+                        <input type="date" id="date" name="date" value="2021-04-16" min="2020-12-27">
+                    </div>
+                    <!--the time he wants there is one already inserted-->
+                    <div class="time" >
+                        <input type="time" id="appt" name="appt" value="12:00">
+                    </div>
+                    <!--the radio buttons for the gender-->
+                    <div class="gender" >
+                        <!--the actual radio buttons are hidden and i styled the label-->
+                        <input type="radio" class="btn-check" name="gender" id="male" value="male" autocomplete="off" checked>
+                        <label class="btn btn-secondary" for="male" id="labelmale">Ανδρας</label></input>
+                        <input type="radio" class="btn-check" name="gender" id="female" value="female" autocomplete="off">       
+                        <label class="btn btn-secondary" for="female" id="labelfemale">Γυναίκα</label></input>
+                    </div>
+                    <div class="buttons">
+                        <!--this button cancels the proccess and sends us to the home page-->
+                        <button type="button" class="btn btn-danger" onclick="location.href = 'HomePage.html';">Ακύρωση</button>
+                        <!--this is not a submit butoon but with js we make the validation and 
+                        we submit the form afterwards-->
+                        <button type="button" class="btn btn-success" id="submit_rantevou">Καταχώρηση</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="espa">
+            <img src="images/espa.jpg" alt="ΕΣΠΑ">
+            <p>Το πρόγραμμα υλοποιήται με τη χρηματοδότηση του ΕΣΠΑ</p>
+        </div>
+        <div class="euro">
+            <img src="images/euro.png" alt="Ευρωπαϊκο Ταμείο">
+            <p>Μέρος των κονδυλίων διατίθεται απο το ευρωπαικό κεντρικό ταμείο</p>
+        </div>
+        <div class="ekstratia">
+            <img src="images/emvolio.jpg" alt="Εθνική Εκστρατεία ">
+            <p>Εθνική Εκστρατεία <br> Εμβολιασμού</p>
+        </div>
+
+    </div>
+    <script src="scripts/animation.js"></script>
+</body>
+</html>

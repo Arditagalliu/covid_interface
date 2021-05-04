@@ -1,0 +1,165 @@
+@import './style.scss';
+
+@media only screen and (min-width: 850px) {
+    .newspage {
+        width: 100%;
+        min-height: 90vh;
+        padding : 10vh 2vw;
+        color: var(--text2);
+        font-size: larger;
+        hr {
+            background-color: var(--text2);
+        }
+        .newscontainer {
+            width: 100%;
+            height: fit-content;
+            padding: 10px;
+            display: grid;
+            grid-template-columns: 1fr;
+            row-gap: 2vh;
+            column-gap: 2vw;
+            .newsdiv {
+                display: grid;
+                grid-template-columns: auto 1fr 1fr;
+                grid-template-rows: auto 1fr auto;
+                margin-bottom: 2vh;
+                .newstitle {
+                    padding: 10px;
+                    grid-column: 1/4;
+                    grid-row: 1/2;
+                    background-color: var(--shadow-color);
+                    @include myshadow(#333);
+                }
+                .newspic {
+                    display: flex;
+                    flex-direction: column;
+                    grid-column: 1/2;
+                    grid-row: 2/3;
+                    padding: 10px;
+                    img {
+                        max-width: 300px;
+                        width: 20vw;
+                        border-radius: 10px;
+                    }
+                }
+                p {
+                    font-weight: lighter; 
+                    font-style: italic;  
+                    margin-left: 10px;
+                    font-size: small;           
+                }
+                .newsbody {
+                    padding: 10px;
+                    grid-column: 2/4;
+                    grid-row: 2/4;
+                    font-size: medium;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .newspage {
+        width: 100%;
+        min-height: 90vh;
+        padding-top : 10vh;
+        color: var(--text2);
+        font-size: larger;
+        text-align: center;
+        hr {
+            background-color: var(--text2);
+        }
+        .newscontainer {
+            width: 100%;
+            height: fit-content;
+            display: flex;
+            flex-direction: column;
+            .newsdiv {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 2vh;
+                
+                .newstitle {
+                    font-size: medium;
+                    padding: 10px;
+                    width: 100%;
+                    border: 3px var(--shadow-color) solid;
+                }
+                .newspic {
+                    padding: 10px;
+                    text-align: center;
+                    img {
+                        max-width: 300px;
+                        width: 90vw;
+                        border-radius: 10px;
+                    }
+                }
+                p {
+                    font-weight: lighter; 
+                    font-style: italic;  
+                    margin-left: 10px;
+                    font-size: small;
+                    text-align: right;
+                    margin-right: 10px;
+                    margin-top: 10px;         
+                }
+                .newsbody {
+                    padding: 10px;
+                    font-size: medium;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 450px) and (max-width: 850px) {
+    .newspage {
+        width: 100%;
+        min-height: 90vh;
+        padding : 10vh 2vw;
+        color: var(--text2);
+        font-size: larger;
+        hr {
+            background-color: var(--text2);
+        }
+        .newscontainer {
+            width: 100%;
+            height: fit-content;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            .newsdiv {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 2vh;
+                .newstitle {
+                    font-size: medium;
+                    padding: 10px;
+                    background-color: var(--shadow-color);
+                    @include myshadow(#333);
+                }
+                .newspic {
+                    padding: 10px;
+                    text-align: center;
+                    img {
+                        max-width: 300px;
+                        width: 50vw;
+                        border-radius: 10px;
+                    }
+                }
+                p {
+                    font-weight: lighter; 
+                    font-style: italic;  
+                    margin-left: 10px;
+                    font-size: small;
+                    text-align: right;         
+                }
+                .newsbody {
+                    padding: 10px;
+                    font-size: medium;
+                }
+            }
+        }
+    }
+}

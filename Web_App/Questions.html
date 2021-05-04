@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<!--footer, navbar, head and menu layout are the same as 
+    the homepage so the comments are needless 
+    for them for i already commented them there-->
+<html lang="gr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info Covid-19</title>
+    <link rel="icon" type="image/png" href="images/mask.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" 
+        crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles/questions_style.css">
+</head>
+<body>
+    <div class="nav">
+        <div class="logo">
+            <img src="images/logo.svg" alt="logo" class="logoicon">
+            <a href="HomePage.html" class="logoname">
+                Εθνικός Οργανισμός <br>Εμβολιασμού
+            </a>
+        </div>
+        <a href="News.html" class="navlink">Νέα</a>
+        <a href="Questions.html" class="navlink">Eρωτήσεις</a>
+        <a href="Rantevou.html" class="navlink">Ραντεβού</a>
+        <a href="Statistics.html" class="navlink">Στατιστικά</a>
+        <a href="Contact.html" class="navlink">Επικοινωνία</a>
+        <img src="images/darkmode.png" id="theme">
+        <img src="images/menu.png" id="menu">
+    </div>
+    <div id="menu_layout">
+        <a href="News.html" class="menulink">Τα Νέα μας</a>
+        <a href="Questions.html" class="menulink">Eρωτήσεις</a>
+        <a href="Rantevou.html" class="menulink">Ραντεβού</a>
+        <a href="Statistics.html" class="menulink">Στατιστικά</a>
+        <a href="Contact.html" class="menulink">Επικοινωνία</a>
+        <img src="images/close.png" id="close_menu">
+    </div>
+    <!--the div that holds the min page-->
+    <div class="qpage">
+        <div class="qcontainer">
+            <!--the title of the page-->
+            Συχνές Ερωτήσεις <hr>
+            <!--the questions are structured as accordion so the question and the answer need to have the same parent-->
+            <div class="qdiv">
+                <!--the question-->
+                <div class="question">Τι είναι COVID-19 και τι SARS–CoV-2;</div>
+                <!--the answer-->
+                <div class="answer">
+                    Ο νέος κορωνοϊός-2019 ονομάζεται τώρα SARS-CoV-2, 
+                    ενώ η ασθένεια που προκαλεί ονομάζεται COVID-19. 
+                    O ιός ανιχνεύθηκε πρώτη φορά το Δεκέμβριο του 2019 στην περιοχή Γιουχάν της Κίνας 
+                    και έκτοτε έως σήμερα έχει διασπαρεί σε αποτελεί ένα νέο στέλεχος κορωνοϊού 
+                    που μέχρι τότε δεν είχε απομονωθεί στον άνθρωπο.
+                </div>
+            </div>
+            <!--another one question answer div-->
+            <div class="qdiv">
+                <div class="question">Ποια είναι τα συμπτώματα της COVID-19 λοίμωξης;</div>
+                <div class="answer">
+                    Τα κύρια συμπτώματα της νόσου περιλαμβάνουν τα κατωτέρω: <br>
+
+                    <li>Πυρετός,</li>
+                    <li>Βήχας,</li>
+                    <li>Φαρυγγαλγία,</li>
+                    <li>Αρθραλγίες,</li>
+                    <li>Μυαλγίες,</li>
+                    <li>Καταβολή,</li>
+                    <li>Δυσκολία στην αναπνοή</li>
+                    Οι περισσότεροι ασθενείς εμφανίζουν ήπια νόσο. Σε περίπτωση βαρύτερης νόσησης, 
+                    ο ασθενής μπορεί να εμφανίσει σοβαρή πνευμονία και να χρειαστεί νοσηλεία σε νοσοκομείο.
+                    <br><br>
+                    Τα άτομα που ανήκουν σε ομάδα υψηλού κινδύνου (π.χ. ηλικιωμένοι, καρδιοπαθείς, 
+                    άτομα με σακχαρώδη διαβήτη, ηπατοπάθειες ή πνευμονοπάθειες) είναι πιθανότερο να εμφανίσουν σοβαρή νόσο.
+                </div>
+            </div>
+            <!--another one question answer div-->
+            <div class="qdiv">
+                <div class="question">Από πού προέρχονται οι κορωνοϊοί;</div>
+                <div class="answer">
+                    Οι κορωνοϊοί προσβάλουν τα ζώα αλλά κάποιοι από αυτούς περιστασιακά προσβάλουν και τον άνθρωπο. 
+                    Πολλά ζώα αποτελούν πηγή μετάδοσης του ιού στον άνθρωπο, 
+                    για παράδειγμα ο ιός MERS προέρχεται από τις καμήλες και ο ιός SARS από τις μοσχογαλές.
+                </div>
+            </div>
+            <!--another one question answer div-->
+            <div class="qdiv">
+                <div class="question">Ποιος είναι ο τρόπος μετάδοσης του ιού;</div>
+                <div class="answer">
+                    Παρόλο που ο ιός προέρχεται από τα ζώα, μεταδίδεται από άνθρωπο σε άνθρωπο. 
+                    Η μετάδοση θεωρείται ότι γίνεται κυρίως μέσω του αναπνευστικού με 
+                    σταγονίδια από το φτέρνισμα, το βήχα ή την εκπνοή.  
+                    Δεν είναι ξεκάθαρο επί του παρόντος αν ο ιός μπορεί να μεταδοθεί 
+                    αερογενώς ή μέσω της κοπρανοστοματικής οδού.
+                </div>
+            </div>
+            <!--another one question answer div-->
+            <div class="qdiv">
+                <div class="question">Ποιος είναι ο χρόνος επώασης για την εμφάνιση της νόσου;</div>
+                <div class="answer">
+                    Πρόσφατες μελέτες υποδεικνύουν ως μέσο διάστημα επώασης του SARS-CoV-2 
+                    τις 5-6 ημέρες και ως μέγιστο χρόνο τις 12 ημέρες.  
+                    Μία πρόσφατη μελέτη επιβεβαίωσε πως είναι συνετό 
+                    να υπολογίζουμε την περίοδο επώασης έως 14 μέρες.
+                </div>
+            </div>
+            <!--another one question answer div-->
+            <div class="qdiv">
+                <div class="question">Πότε μια περίπτωση της νόσου θεωρείται περισσότερο μεταδοτική;</div>
+                <div class="answer">
+                    Ένα  περιστατικό  θεωρείται  περισσότερο  μεταδοτικό  όταν εμφανίζει συμπτώματα,  
+                    αλλά  θα μπορούσε να είναι μεταδοτικό και στην ασυμπτωματική φάση. 
+                    Δεν γνωρίζουμε το ποσοστό των ασυμπτωματικών κρουσμάτων, 
+                    ούτε τον ακριβή ρόλο που παίζουν στη μετάδοση του SARS-CoV-2, 
+                    πιθανολογείται όμως πως είναι μικρότερη από αυτήν των συμπτωματικών περιπτώσεων της νόσου.
+                </div>
+            </div>
+            <!--another one question answer div-->
+            <div class="qdiv">
+                <div class="question">Υπάρχει θεραπεία για τη COVID-19 λοίμωξη;</div>
+                <div class="answer">
+                    Δεν υπάρχει  επί του παρόντος ειδική θεραπεία για τη νόσο. 
+                    Η θεραπεία είναι υποστηρικτική με στόχο την ανακούφιση των συμπτωμάτων. 
+                    Μελετώνται καινούργιες θεραπείες σε κλινικές μελέτες σε περιοχές με μεγάλες επιδημίες όπως η Κίνα.
+                </div>
+            </div>
+            <!--another one question answer div-->
+            <div class="qdiv">
+                <div class="question">Γιατί ο αριθμός των κρουσμάτων αυξάνει τόσο γρήγορα;</div>
+                <div class="answer">
+                    Οι δύο βασικές αιτίες για την ταχεία αύξηση του αριθμού των κρουσμάτων είναι 
+                    ότι ο ιός μεταδίδεται από άνθρωπο σε άνθρωπο και ότι έχει βελτιωθεί η δυνατότητα ανίχνευσής του.
+                </div>
+            </div>
+            <!--another one question answer div-->
+            <div class="qdiv">
+                <div class="question">Είναι ασφαλής η λήψη πακέτων ή δεμάτων από περιοχές με κυκλοφορία του ιού στην κοινότητα;</div>
+                <div class="answer">
+                    Με δεδομένο ότι ο SARS-Cov-2 δεν επιβιώνει για μεγάλο χρονικό διάστημα στις επιφάνειες, 
+                    είναι εξαιρετικά χαμηλός ο κίνδυνος μετάδοσης από προϊόντα ή πακέτα που έχουν ταξιδέψει 
+                    για ημέρες ή εβδομάδες σε θερμοκρασία περιβάλλοντος. Οι κορωνοϊοί μεταδίδονται κυρίως με 
+                    σταγονίδια από το αναπνευστικό. 
+                    Η χρήση των μέτρων ατομικής υγιεινής σε οιαδήποτε περίπτωση μηδενίζει αυτόν τον κίνδυνο.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="espa">
+            <img src="images/espa.jpg" alt="ΕΣΠΑ">
+            <p>Το πρόγραμμα υλοποιήται με τη χρηματοδότηση του ΕΣΠΑ</p>
+        </div>
+        <div class="euro">
+            <img src="images/euro.png" alt="Ευρωπαϊκο Ταμείο">
+            <p>Μέρος των κονδυλίων διατίθεται απο το ευρωπαικό κεντρικό ταμείο</p>
+        </div>
+        <div class="ekstratia">
+            <img src="images/emvolio.jpg" alt="Εθνική Εκστρατεία ">
+            <p>Εθνική Εκστρατεία <br> Εμβολιασμού</p>
+        </div>
+
+    </div>
+    <script src="scripts/animation.js"></script>
+</body>
+</html>

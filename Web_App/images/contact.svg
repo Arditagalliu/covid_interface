@@ -1,0 +1,31 @@
+<svg width="391" height="232" viewBox="0 0 391 232" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0)">
+<rect x="8" y="8" width="344" height="184" rx="17" fill="#EA6F17" stroke="#F1B313" stroke-width="16"/>
+<line x1="4.70751" y1="4.53167" x2="184.708" y2="135.532" stroke="#F1B313" stroke-width="16"/>
+<line x1="175.242" y1="135.569" x2="348.242" y2="7.56891" stroke="#F1B313" stroke-width="16"/>
+<line x1="10.6876" y1="184.262" x2="135.688" y2="104.262" stroke="#F1B313" stroke-width="16"/>
+<line x1="225.463" y1="104.361" x2="344.463" y2="184.361" stroke="#F1B313" stroke-width="16"/>
+<g filter="url(#filter0_d)">
+<circle cx="316" cy="157" r="75" fill="#2F7FDC"/>
+</g>
+<path d="M269.337 201.752L278.155 183.039C279.681 179.801 284.015 179.168 286.403 181.835L291.013 186.984C293.401 189.651 292.295 193.889 288.908 195.049L269.337 201.752Z" fill="#C4C4C4"/>
+<path d="M269.524 201.586L274.531 191.062L280.534 197.768L269.524 201.586Z" fill="black"/>
+<rect x="351.208" y="117.042" width="8" height="99" rx="4" transform="rotate(48.1609 351.208 117.042)" fill="#925047" stroke="black"/>
+<rect x="357.211" y="123.748" width="8" height="99" rx="4" transform="rotate(48.1609 357.211 123.748)" fill="#C4C4C4" stroke="black"/>
+<rect x="357.168" y="111.706" width="17" height="14" transform="rotate(48.1609 357.168 111.706)" fill="#FD4A4A" stroke="black"/>
+</g>
+<defs>
+<filter id="filter0_d" x="237" y="82" width="158" height="158" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+</filter>
+<clipPath id="clip0">
+<rect width="391" height="232" rx="25" fill="white"/>
+</clipPath>
+</defs>
+</svg>

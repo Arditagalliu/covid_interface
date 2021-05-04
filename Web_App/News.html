@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<!--footer, navbar, head and menu layout are the same as 
+    the homepage so the comments are needless 
+    for them for i already commented them there-->
+<html lang="gr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info Covid-19</title>
+    <link rel="icon" type="image/png" href="images/mask.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" 
+        crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles/news_style.css">
+</head>
+<body>
+    <div class="nav">
+        <div class="logo">
+            <img src="images/logo.svg" alt="logo" class="logoicon">
+            <a href="HomePage.html" class="logoname">
+                Εθνικός Οργανισμός <br>Εμβολιασμού
+            </a>
+        </div>
+        <a href="News.html" class="navlink">Νέα</a>
+        <a href="Questions.html" class="navlink">Eρωτήσεις</a>
+        <a href="Rantevou.html" class="navlink">Ραντεβού</a>
+        <a href="Statistics.html" class="navlink">Στατιστικά</a>
+        <a href="Contact.html" class="navlink">Επικοινωνία</a>
+        <img src="images/darkmode.png" id="theme">
+        <img src="images/menu.png" id="menu">
+    </div>
+    <div id="menu_layout">
+        <a href="News.html" class="menulink">Τα Νέα μας</a>
+        <a href="Questions.html" class="menulink">Eρωτήσεις</a>
+        <a href="Rantevou.html" class="menulink">Ραντεβού</a>
+        <a href="Statistics.html" class="menulink">Στατιστικά</a>
+        <a href="Contact.html" class="menulink">Επικοινωνία</a>
+        <img src="images/close.png" id="close_menu">
+    </div>
+    <!--this is the div that holds the main page-->
+    <div class="newspage">
+        <!--the page title-->
+        Τα Νέα μας <hr>
+        <!--the container that holds the articles-->
+        <div class="newscontainer">
+            <!--the first article-->
+            <div class="newsdiv" id="news1">
+                <!--we start we the article title-->
+                <div class="newstitle">Στο τραπέζι χαλάρωση μέτρων για τους εμβολιασμένους</div>
+                <!--the picture of the article-->
+                <div class="newspic">
+                    <img src="images/news1.jpg" alt="news picture">
+                </div>
+                <!--the main text of the article-->
+                <div class="newsbody">
+                    Η Εβδομάδα των Παθών, ξεκίνησε με την πανδημία στη χώρα να είναι σε κρίσιμο σημείο, 
+                    εμφανίζοντας από τη μια περιορισμό κρουσμάτων και νοσηλειών, αλλά υψηλό αριθμό θανάτων 
+                    (χθες έσπασε το φράγμα των 10.000 θανάτων στην Ελλάδα), ενώ σε ανησυχητικά υψηλά επίπεδα 
+                    παραμένουν οι διασωληνώσεις.
+
+                    Κυβέρνηση και ειδικοί παρακολουθούν με κομμένη την ανάσα, το σταδιακό άνοιγμα της χώρας, 
+                    ειδικά από σήμερα Μεγάλη Δευτέρα, γνωρίζοντας ότι από το βαθμό τήρησης των μέτρων προστασίας 
+                    από τον κοροναϊό, θα κριθεί σε ποια επιδημιολογική κατάσταση θα γίνει η άρση του πολύμηνου lockdown, 
+                    που έχει προσδιοριστεί στα μέσα Μαίου, με την έλευση των πρώτων τουριστών στη χώρα.
+                    
+                
+                </div>
+                <!--and a small counter for the date-->
+                <p>3 ώρες πριν</p>
+            </div>
+            <!--another article-->
+            <div class="newsdiv">
+                <div class="newstitle">Ανησυχία για την ινδική μετάλλαξη</div>
+                <div class="newspic">
+                    <img src="images/news2.jpg" alt="news picture">
+                </div> 
+                <div class="newsbody">
+                    Το πρώτο εντοπίστηκε στην Πάτρα και επρόκειτο για άνδρα, ο οποίος δεν είχε ταξιδέψει, 
+                    ούτε είχε έρθει σε επαφή με κρούσμα. Το δεύτερο, εντοπίστηκε στο κέντρο της Αθήνας, 
+                    σε μία 33χρονη αλλοδαπή, που είχε ταξιδέψει στο Ντουμπάι, είχε επιστρέψει στη χώρα με 
+                    αρνητικό τεστ και στη συνέχεια παρουσίασε συμπτώματα. 
+                    “Δεν υπάρχουν επαρκή δεδομένα για την νέα παραλλαγή του κορονοϊού, 
+                    την ινδική”, υπογράμμισε ο αντιπρύτανης του ΕΚΠΑ, Αθανάσιος Τσακρής, 
+                    μιλώντας στο κεντρικό δελτίο ειδήσεων του ΑΝΤ1. Σημείωσε, πάντως, 
+                    πως “τα επιδημιολογικά δεδομένα δείχνουν πως η λεγόμενη ινδική μετάλλαξη 
+                    είναι πιο μεταδοτική και ενδεχομένως να διαφεύγει από την ανοσία του εμβολιασμού”. 
+                    Ωστόσο, διευκρίνισε ότι είναι μικρό το ενδεχόμενο διαφυγής της νέας μετάλλαξης από τα εμβόλια και, 
+                    ως εκ τούτου, συνέστησε να προχωρήσει σε παγκόσμιο επίπεδο ο εμβολιασμός.
+                </div><p>2 ημέρες πριν</p>
+            </div>
+            <!--another article-->
+            <div class="newsdiv">
+                <div class="newstitle">Self Test: Τι ισχύει για Εργαζομένους και Εργοδότες</div>
+                <div class="newspic">
+                    <img src="images/news3.jpg" alt="news picture">
+                </div> 
+                <div class="newsbody">
+                    Κατόπιν πολλών ερωτημάτων που έχουν τεθεί στο Υπ. Εργασίας και Κοινωνικών Υποθέσεων 
+                    αναφορικά με την υποχρέωση διενέργειας διαγνωστικού ελέγχου νόσησης από τον κορωνοϊό 
+                    COVID-19 για τους εργαζόμενους του ιδιωτικού τομέα, 
+                    με τη νέα εγκύκλιο 22963/2021 διευκρινίζονται τα εξής σχετικά με την ΚΥΑ Δ1α/ΓΠ.οικ. 24525/18.4.2021:
+                    <br>
+                    Σύμφωνα με το άρθρο 1 της ανωτέρω ΚΥΑ «Οι διατάξεις της παρούσας εφαρμόζονται
+                    για τους εργαζόμενους/ες σε εργοδότες με επιχειρηματική δραστηριότητα α) στο λιανεμπόριο 
+                    β) στις μεταφορές γ) στην εστίαση, δ) στις χρηματοπιστωτικές και ασφαλιστικές δραστηριότητες 
+                    ε) στις δραστηριότητες καθαρισμού στ) στις υπηρεσίες τυχερών παιχνιδιών και στοιχημάτων 
+                    ζ) σε άλλες δραστηριότητες παροχής προσωπικών υπηρεσιών (κομμωτήρια, κουρεία και κέντρα αισθητικής) 
+                    και η) στις δραστηριότητες σχολών οδηγών, προκειμένου να παρέχουν την εργασία τους με φυσική παρουσία 
+                    στον συμφωνημένο στην ατομική τους σύμβαση τόπο εργασίας σύμφωνα με τους Πίνακες 1 έως και 8 του Παραρτήματος Α 
+                    που προσαρτάται στην παρούσα και αποτελεί αναπόσπαστο μέρος της».
+                </div><p>1 εβδομάδα πριν</p>
+            </div>
+            <!--another article-->
+            <div class="newsdiv">
+                <div class="newstitle">Οι δυνατότητες για όσους έχουν εμβολιαστεί πλήρως</div>
+                <div class="newspic">
+                    <img src="images/news4.jpg" alt="news picture">
+                </div>
+                <div class="newsbody">
+                    Όταν κάποιος έχει ολοκληρώσει τον εμβολιασμό του τότε από τους 
+                    ειδικούς θεωρείται ασφαλές να περπατάει, ή να αθλείται σε εξωτερικό χώρο, 
+                    να βρίσκεται σε μικρές μαζώξεις με εμβολιασμένα ή μη άτομα, και να γευματίσει 
+                    σε ένα εξωτερικό χώρο χωρίς μάσκα. 
+                    Ωστόσο, καλό θα ήταν να συνεχίσει να φοράει μάσκα <br>
+                    Σε εσωτερικούς χώρους δυνητικά θα μπορούσε να παραλειφθεί η χρήση της μάσκας 
+                    σε συναθροίσεις με πλήρως εμβολιασμένα άτομα, ή σε αν οι 
+                    μη εμβολιασμένοι είναι από μία μόνο οικογένεια σε ομάδες λίγων ατόμων. <br>
+                    Θεωρητικά, οι πλήρως εμβολιασμένοι είναι ασφαλές να ταξιδέψουν εντός των 
+                    συνόρων της χώρας, χωρίς να κάνουν τεστ ή να μπουν σε καραντίνα επιστρέφοντας. 
+                    Παρόλα αυτά, είναι σημαντικό στα ταξίδια να τηρούνται μέτρα προφύλαξης, 
+                    όπως η τήρηση αποστάσεων, η χρήση μάσκας, και η σωστή και συχνή υγιεινή των χεριών. 
+                    Όσον αφορά το ταξίδι στο εξωτερικό, ανάλογα με τον προορισμό το άτομο πρέπει να ελέγξει αν απαιτείται 
+                    πιστοποιητικό εμβολιασμού ή καραντίνα στην επιστροφή
+                </div><p>2 εβδομάδες πριν</p>
+            </div>
+            <!--another article-->
+            <div class="newsdiv">
+                <div class="newstitle">SARS-CoV-2 : Πώς χτίζεται η ανοσία;</div>
+                <div class="newspic">
+                    <img src="images/news5.jpg" alt="news picture">
+                </div>
+                <div class="newsbody">
+                    Η ανοσία (και η διάρκειά της) μετά από νόσηση με τον νέο κορωνοϊό ή 
+                    μετά τον εμβολιασμό, αυτή η άγνωστη… Ενα από τα πιο φλέγοντα ερωτήματα 
+                    για τους ερευνητές ανά τον κόσμο αυτή τη στιγμή οι οποίοι προσπαθούν 
+                    να ρίξουν φως στα μυστικά της ανοσολογικής απόκρισης του ανθρώπινου 
+                    οργανισμού στον SARS-CoV-2 ώστε να «φωτίσουν» τελικά και τις ζωές των 
+                    ταλανισμένων από την κορωνο-πανδημία δισεκατομμυρίων κατοίκων του πλανήτη.
+
+                    Στην πρώτη γραμμή της σημαντικής αυτής ερευνητικής «ανοσο-μάχης» βρίσκεται 
+                    ο καθηγητής του Τμήματος για τα Εμβόλια και τα Μεταδιδόμενα Νοσήματα στο διάσημο 
+                    Κέντρο για την Ερευνα στον Καρκίνο Fred Hutchinson στο Σιάτλ των ΗΠΑ κ. Λεωνίδας Σταματάτος.
+                </div><p>2 εβδομάδες πριν</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="espa">
+            <img src="images/espa.jpg" alt="ΕΣΠΑ">
+            <p>Το πρόγραμμα υλοποιήται με τη χρηματοδότηση του ΕΣΠΑ</p>
+        </div>
+        <div class="euro">
+            <img src="images/euro.png" alt="Ευρωπαϊκο Ταμείο">
+            <p>Μέρος των κονδυλίων διατίθεται απο το ευρωπαικό κεντρικό ταμείο</p>
+        </div>
+        <div class="ekstratia">
+            <img src="images/emvolio.jpg" alt="Εθνική Εκστρατεία ">
+            <p>Εθνική Εκστρατεία <br> Εμβολιασμού</p>
+        </div>
+
+    </div>
+    <script src="scripts/animation.js"></script>
+</body>
+</html>
