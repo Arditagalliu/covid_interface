@@ -1,5 +1,5 @@
 @import './style.scss';
-
+//pc design
 @media only screen and (min-width: 850px) {
     .rantevou {
         min-height: 90vh;
@@ -282,7 +282,7 @@
         }
     }
 }
-
+//mobile design
 @media only screen and (max-width: 450px) {
     .rantevou {
         min-height: 90vh;
@@ -532,7 +532,7 @@
         }
     }
 }
-
+//tablet design
 @media only screen and (min-width: 450px) and (max-width: 850px) {
     .rantevou {
         min-height: 90vh;

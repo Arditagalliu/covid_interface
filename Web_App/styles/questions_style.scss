@@ -1,6 +1,8 @@
 @import './style.scss';
-
+//pc design 
 @media only screen and (min-width: 850px) {
+    //the main body
+    //positioning and sizing
     .qpage {
         width: 100%;
         min-height: 90vh;
@@ -8,18 +10,24 @@
         padding-right: 2vw;
         padding-top: 2vh;
         padding-bottom: 2vh;
+        //the container with the questions
+        //just color and positioning
         .qcontainer {
             padding-top: 10vh;
             color: var(--text2);
             font-size: larger;
+            //the bottom border of the title
             hr {
                 background-color: var(--text2);
             }
+            //the container of a single question and its answer
+            //just positioning and sizing and border styling
             .qdiv {
                 width: 95vw;
                 height: fit-content;
                 border: 2px var(--shadow-color) solid;
                 margin-bottom: calc(2vh + 10px);
+                //the styling of the question alone
                 .question {
                     margin-top: 0.1%;
                     margin-bottom: 0.1%;
@@ -40,6 +48,8 @@
                         }
                     }
                 }
+                //the styling of the answer
+                //its only visible on clicking the respective question
                 .answer {
                     display: none;
                     transition: all ease-in 1s;
@@ -50,7 +60,8 @@
         }
     }
 }
-
+//mobile design
+//the same just adjusted the sizing to be full width on the questions
 @media only screen and (max-width: 450px) {
     .qpage {
         width: 100%;
@@ -100,7 +111,8 @@
         }
     }
 }
-
+//tablet design
+//the same just adjusted the sizing
 @media only screen and (min-width: 450px) and (max-width: 850px) {
     .qpage {
         width: 100%;

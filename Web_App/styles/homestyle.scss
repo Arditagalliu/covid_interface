@@ -1,15 +1,18 @@
 @import './style.scss';
-
+//pc design
 @media only screen and (min-width: 850px) {
     body {
-        .myhome {
+        .myhome { 
             .carousel {
                 border-radius: 20px;
+                //sizing the carousel
                 .carousel-inner{
                     border-radius: 20px;
                     height: fit-content;
                     max-height: 80vh;
+                    //shadow for the carousel
                     @include myboxshadow(var(--shadow-color));
+                    //sizing and coloring the images of the carousel and their captions 
                     .carousel-item {
                         .carousel-caption {
                             p {
@@ -26,6 +29,7 @@
                         }
                     }
                 }
+                //putting a hover on the arrow controlers of the carousel
                 .carousel-control-next {
                     transition: all ease-in-out 0.4s;
                     .carousel-control-next-icon {
@@ -37,6 +41,7 @@
                         background-color: var(--shadow-color);
                     }
                 }
+                //putting a hover on the arrow controlers of the carousel
                 .carousel-control-prev{
                         transition: all ease-in-out 0.4s;
                         .carousel-control-prev-icon {
@@ -48,12 +53,14 @@
                         background-color: var(--shadow-color);
                     }
                 }
+                //sizing the carousel
                 margin: 5vh 5vw;
                 width: 90vw;
                 height: fit-content;
                 max-height: 80vh;
             }
         }
+        //the box cards with the informations of the organization
         .org_cont {
             display: flex;
             gap: 10vh;
@@ -69,9 +76,11 @@
                 padding: 10px;
             }
         }
+        //the videos container
         .videos {
             display: flex;
             margin-top: 10vh;
+            //the cards of the videos sizing and coloring
             .videocard {
                 border-radius: 10px;
                 width: 30vw;
@@ -79,12 +88,14 @@
                 min-height: calc(20vw + 20px);
                 background-color: var(--shadow-color);
                 @include myboxshadow(var(--color1));
+                //sizing of the videos
                 iframe {
                     border-radius: 10px;
                     width: 96%;
                     height: 17vw;
                     margin-left: 2%;
                 }
+                //styling and positioning of the cards title
                 p {
                     display: flex;
                     align-items: center;
@@ -97,6 +108,7 @@
                 }
             }
         }
+        //sizingn and grid positioning the container of the instruction cards
         .cards {
             display: grid;
             width: 90vw;
@@ -107,6 +119,7 @@
             margin-right: 5vw;
             margin-bottom: 5vw;
             margin-top: 10vh;
+            // the styling of the instruction cards and their color,border styling
             .card {
                 padding-top: 20px;
                 display: flex;
@@ -116,22 +129,29 @@
                 border-radius: 20px;
                 background-color: var(--shadow-color);
                 color: var(--text-color);
+                //the icon af the card
                 img {
                     width: 80%;
                     max-width: 100px;
                 }
             }
+            //this class selectors takes the last card and puts 
+            //it on the third row of the grid to be on the left of the latest news
             .main-card {
                 grid-row: 3/4;
                 align-self: center;
             }
+            //this class selectors takes the before the last card and puts 
+            //it on the second row of the grid to be on the left of the latest news
             .prelast {
                 align-self: center;
             }
+            //this div is in the cards grid and akes place an the remaining of the rows 2nd and 3rd
             .news {
                 grid-column: 2/4;
                 grid-row: 2/4;
                 color: var(--text2);
+                //titles of the div latest news
                 .title {
                     width: 100%;
                     border-bottom: 2px red solid;
@@ -140,14 +160,17 @@
                     font-size: x-large;
                 }
                 .article {
+                //small description of the latest news
                     .article_desc {
                         display: flex;
                         width: 100%;
+                        //a small text in the end of the article with the date
                         .article_date {
                             flex: 1;
                             text-align: end;
                         }
                     }
+                    //the title
                     hr {
                         background-color: var(--text2);
                     }

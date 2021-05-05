@@ -1,5 +1,5 @@
 @import './style.scss';
-
+//pc design
 @media only screen and (min-width: 850px) {
     .newspage {
         width: 100%;
@@ -7,9 +7,12 @@
         padding : 10vh 2vw;
         color: var(--text2);
         font-size: larger;
+        //the bottom border of the title of the page
         hr {
             background-color: var(--text2);
         }
+        //the container of all the news 
+        //i made it a grid because it responded better than the flex column
         .newscontainer {
             width: 100%;
             height: fit-content;
@@ -18,11 +21,16 @@
             grid-template-columns: 1fr;
             row-gap: 2vh;
             column-gap: 2vw;
+            //the div of every respective article
+            //a grid with the article title on the whole first row
+            //a picture and a text on the second
+            //and a date on the last
             .newsdiv {
                 display: grid;
                 grid-template-columns: auto 1fr 1fr;
                 grid-template-rows: auto 1fr auto;
                 margin-bottom: 2vh;
+                //the article title
                 .newstitle {
                     padding: 10px;
                     grid-column: 1/4;
@@ -30,6 +38,7 @@
                     background-color: var(--shadow-color);
                     @include myshadow(#333);
                 }
+                //the div that holds the picture of the respective article
                 .newspic {
                     display: flex;
                     flex-direction: column;
@@ -42,12 +51,14 @@
                         border-radius: 10px;
                     }
                 }
+                //the date of thee article small text on the bottom left
                 p {
                     font-weight: lighter; 
                     font-style: italic;  
                     margin-left: 10px;
                     font-size: small;           
                 }
+                //the text of the artice
                 .newsbody {
                     padding: 10px;
                     grid-column: 2/4;
@@ -58,7 +69,9 @@
         }
     }
 }
-
+//mobile design
+//the same just adjusted the sizing and made the news container flex column
+//and got rid of some extra styling
 @media only screen and (max-width: 450px) {
     .newspage {
         width: 100%;
@@ -112,7 +125,8 @@
         }
     }
 }
-
+//tablet design
+//the same with the tablet just with that extra styling and adjusted sizing
 @media only screen and (min-width: 450px) and (max-width: 850px) {
     .newspage {
         width: 100%;
