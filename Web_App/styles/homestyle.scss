@@ -179,10 +179,13 @@
         }
     }
 }
-
+// mobile design
+//got rid of most of the hover effects
 @media only screen and (max-width: 450px) {
     body {
         .myhome {
+            //the carousel stays the same as the pc design
+            //but adjusted the sizing
             .carousel {
                 border-radius: 20px;
                 .carousel-inner{
@@ -217,6 +220,7 @@
                 height: fit-content;
                 max-height: 80vh;
             }
+            //the boxes containing the info took a width 90%
             .orginfo {
                 width: 90vw;
                 height: fit-content;
@@ -228,6 +232,7 @@
                 margin-left: 5vw;
                 padding: 10px;
             }
+            //made the videos cards a collumn flex
             .videos {
                 display: flex;
                 margin-top: 10vh;
@@ -258,6 +263,7 @@
                     }
                 }
             }
+            //the cards became a column flex
             .cards {
                 display: flex;
                 flex-direction: column;
@@ -281,6 +287,8 @@
                         max-width: 100px;
                     }
                 }
+                // in the news just adjusted the sizing of each 
+                // individual new and its components
                 .news {
                     color: var(--text2);
                     .title {
@@ -306,6 +314,9 @@
         }
     }
 }
+//tablet design
+//the same as the pc design just adjusted the sizes of the carousel and the cards grid
+//and changed the sorting in the cards grid
 @media only screen and (min-width: 450px) and (max-width: 850px) {
     body {
         .myhome {

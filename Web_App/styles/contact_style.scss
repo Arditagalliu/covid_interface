@@ -1,8 +1,10 @@
 @import './style.scss';
-
+//pc design
 @media only screen and (min-width: 850px) {
     .contactpage {
         padding: 5vh 2vw;
+        //there is a centrel grid in wich 
+        //i  positioned the welcoming text the inputs and the buttons 
         .ccontainer {
             min-height: 77vh;
             display: grid;
@@ -16,6 +18,7 @@
             justify-items: center;
             padding: 20px;
             border-radius: 10px;
+            //the welcoming text with na underline border
             #ptitle {
                 width: 100%;
                 color: var(--text-color);
@@ -24,6 +27,8 @@
                 border-bottom: 2px var(--text-color) solid;
                 padding: 10px;
             }
+            // removed the default sizing
+            // and margins and styled the inputs and their labels
             .firstname {
                 label {
                     display: inline-block;
@@ -202,7 +207,10 @@
         }
     }
 }
-
+//mobile design
+//just made the grid with only one collumn and the fields
+//taking up the whole row
+//also moved the label on top of the input its self
 @media only screen and (max-width: 450px) {
     .contactpage {
         padding: 5vh 2vw;
@@ -398,7 +406,9 @@
         }
     }
 }
-
+//tablet design 
+// the same as the mobile design but the fields 
+//do nott take up all the row of the grid 
 @media only screen and (min-width: 450px) and (max-width: 850px) {
     .contactpage {
         padding: 5vh 2vw;
